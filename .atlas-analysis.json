@@ -1,0 +1,127 @@
+{
+  "projectType": "saas",
+  "projectName": "Canvasflow",
+  "projectDescription": "Canvasflow is a cloud-based digital publishing platform that lets teams create, design, and publish responsive HTML5 content to multiple channels including PWA, Apple News, WordPress, Twixl, PDF, and more.",
+  "theme": "willow",
+  "primaryColor": "#ec5b6c",
+  "lightColor": "#ec5b6c",
+  "darkColor": "#343434",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "getting-started/introduction",
+              "getting-started/creating-a-publication",
+              "getting-started/creating-an-article",
+              "getting-started/styles-and-templates",
+              "getting-started/publishing-channels"
+            ]
+          },
+          {
+            "group": "Publications & Issues",
+            "pages": [
+              "publications/managing-publications",
+              "publications/issue-manager",
+              "publications/publication-settings"
+            ]
+          },
+          {
+            "group": "Article Manager",
+            "pages": [
+              "articles/article-manager",
+              "articles/article-builder",
+              "articles/components",
+              "articles/media-components",
+              "articles/working-with-links"
+            ]
+          },
+          {
+            "group": "Design",
+            "pages": [
+              "design/styles-overview",
+              "design/building-a-style",
+              "design/templates-overview",
+              "design/building-a-template",
+              "design/custom-fonts"
+            ]
+          },
+          {
+            "group": "Settings",
+            "pages": [
+              "settings/users-and-roles",
+              "settings/publication-details",
+              "settings/multi-language"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Publishing Channels",
+        "groups": [
+          {
+            "group": "Web & App",
+            "pages": [
+              "publish/pwa",
+              "publish/apple-news",
+              "publish/wordpress"
+            ]
+          },
+          {
+            "group": "Export Formats",
+            "pages": [
+              "publish/pdf",
+              "publish/html-email",
+              "publish/xml"
+            ]
+          },
+          {
+            "group": "Third-Party Platforms",
+            "pages": [
+              "publish/twixl",
+              "publish/zinio",
+              "publish/cafeyn",
+              "publish/paperlit",
+              "publish/hpub"
+            ]
+          },
+          {
+            "group": "Content Sources",
+            "pages": [
+              "content-sources/indesign-plugin",
+              "content-sources/wordpress-to-canvasflow",
+              "content-sources/xflow-pdf"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Drag-and-drop HTML5 article builder with responsive design",
+    "Style system for consistent brand design across articles",
+    "Reusable article templates and snippets",
+    "Progressive Web App (PWA) builder with custom domains",
+    "Multi-channel publishing: Apple News, WordPress, Twixl, Zinio, Cafeyn, Paperlit",
+    "PDF and HTML email export from any article",
+    "InDesign plugin for importing print layouts",
+    "xFlow PDF import service",
+    "WordPress two-way integration (import and export)",
+    "Multi-language support with automatic translation",
+    "Text-to-speech generation",
+    "Roles and permissions with five access levels",
+    "Issue-based and article-based publication modes"
+  ],
+  "publicApiSurface": [
+    "Canvasflow Export WordPress Plugin (API Key + API Path)",
+    "InDesign Plugin (API Key, Publication, Issue, Style configuration)",
+    "xFlow FTP delivery endpoint",
+    "PWA subdomain configuration",
+    "Apple News Channel connector (Channel ID, API Key, Secret Key)",
+    "XML channel output",
+    "Publish Channels API (per publication)"
+  ]
+}

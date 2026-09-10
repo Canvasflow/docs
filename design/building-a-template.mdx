@@ -1,0 +1,123 @@
+---
+title: "Building Templates in the Canvasflow Template Builder"
+sidebarTitle: "Build a Template"
+description: "Learn how to build article templates in Canvasflow by adding and arranging components, applying styles, and adding custom code sections."
+---
+
+The Template Builder is the editor you use to define the component layout and initial content of a template. It works in exactly the same way as the Article Builder — the same drag-and-drop interface, the same component library, and the same toolbar controls. The key difference is that what you build here becomes the starting point for every new article created from this template, not a published piece of content in itself.
+
+## Opening the Template Builder
+
+In the **Template Manager**, locate the template you want to build or edit, and click **Edit**. The Template Builder opens with the template's canvas and any components that have already been added. If the template is new, the canvas will be empty.
+
+## Adding Components to a Template
+
+Building a template is identical to building an article. Drag components from the component panel onto the canvas and arrange them in the order your articles will typically follow.
+
+<Steps>
+  <Step title="Open the component panel">
+    The component panel on the left lists all available components: text components (Title, Subtitle, Paragraph, etc.), media components (Image, Video, Gallery, etc.), layout components (Column, Divider, Spacer), and interactive components (Button, Anchor, Map, etc.).
+  </Step>
+  <Step title="Drag components onto the canvas">
+    Drag each component you want in your template onto the canvas in order. For example, a typical news article template might start with a **Title**, followed by an **Image**, a **Subtitle**, and then a **Paragraph**.
+  </Step>
+  <Step title="Add initial content (optional)">
+    You can pre-populate components with placeholder or fixed content. For example, add a standard footer disclaimer, a branded tagline, or an author credit that should appear in every article using this template.
+  </Step>
+  <Step title="Arrange the components">
+    Reorder components by dragging them to their correct positions on the canvas. The order of components in the template becomes the default order in every article created from it.
+  </Step>
+</Steps>
+
+<Note>
+  Styles are separate from templates. The template stores only the component structure and initial content. Fonts, colours, padding, and all visual design are controlled by whichever style is associated with the template or the article.
+</Note>
+
+## Changing a Template's Style
+
+You can change the style applied to a template at any time from within the Template Builder. This is useful when you want to preview how the template looks under a different style, or when a style has been renamed or replaced.
+
+<Steps>
+  <Step title="Open the Style menu">
+    From the Template Builder toolbar, click the **Style** button. A list of all available styles for the publication is displayed.
+  </Step>
+  <Step title="Select a style">
+    Click the style you want to apply. The template canvas updates immediately to reflect the new style.
+  </Step>
+  <Step title="Close the menu and save">
+    Click outside the Style menu to close it, then click **Save** to commit the style change.
+  </Step>
+</Steps>
+
+### Editing the Current Style from the Template Builder
+
+If you want to make adjustments to the style currently associated with the template, you can navigate directly to it without leaving the Template Builder context.
+
+<Steps>
+  <Step title="Save the template first">
+    Click **Save** before proceeding — editing a style navigates you away from the template, and any unsaved changes will be lost.
+  </Step>
+  <Step title="Open the Style menu">
+    Click the **Style** button in the toolbar.
+  </Step>
+  <Step title="Click Edit">
+    Click **Edit** next to the currently selected style. You are taken to the Style Builder with that style open.
+  </Step>
+  <Step title="Make changes and save">
+    Make the required style changes and click **Save** in the Style Builder.
+  </Step>
+  <Step title="Return to the template">
+    Click the **Return to Template** button to navigate directly back to your template.
+  </Step>
+</Steps>
+
+## Working with Custom Code in Templates
+
+For advanced design requirements, Canvasflow's **Custom Code** component lets you embed HTML, CSS, or JavaScript directly into a template. This is useful for embedding third-party widgets, custom interactive elements, or design features that are not available through the standard component library.
+
+To add a custom code block, drag the **Custom Code** component from the component panel onto the template canvas and enter your code in the editor that appears. The component is embedded at that position in every article created from the template.
+
+<Warning>
+  Custom code runs in the output of published articles. Test thoroughly across all your target platforms and devices before publishing articles that include custom code.
+</Warning>
+
+## Image Filters in Templates
+
+The **Image** component in Canvasflow supports visual filters that can be pre-configured in a template. To apply an image filter to an image component already on the template canvas:
+
+<Steps>
+  <Step title="Select the image component">
+    Click the image component on the template canvas to select it.
+  </Step>
+  <Step title="Open image properties">
+    The image properties panel opens. Navigate to the **Filters** section.
+  </Step>
+  <Step title="Apply a filter">
+    Select and configure the filter you want to apply (for example, Greyscale, Sepia, Brightness, or Contrast adjustments).
+  </Step>
+  <Step title="Save">
+    Click **Save** to apply the filter setting to the template.
+  </Step>
+</Steps>
+
+Image filters set on a template image component serve as a default for articles created from the template. Editors can override the filter on a per-article basis in the Article Builder.
+
+## Saving a Template
+
+Click **Save** in the Template Builder toolbar whenever you want to commit your changes. After saving, the updated template is immediately available when creating new articles.
+
+<Steps>
+  <Step title="Complete your changes">
+    Add, arrange, or edit components until the template layout reflects exactly what you need as a starting point for new articles.
+  </Step>
+  <Step title="Click Save">
+    Click **Save** in the toolbar. The template is saved and updated in the Template Manager.
+  </Step>
+  <Step title="Verify in Template Manager">
+    Return to the Template Manager to confirm the template appears as expected. It is now listed as an option the next time any team member creates a new article in this publication.
+  </Step>
+</Steps>
+
+<Tip>
+  After saving a template, create a test article from it to verify that the layout, pre-populated content, and associated style all appear exactly as intended.
+</Tip>

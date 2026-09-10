@@ -1,0 +1,158 @@
+---
+title: "Canvasflow Article Templates: Streamline Content Creation"
+sidebarTitle: "Templates"
+description: "Use Canvasflow templates to define reusable article layouts and structures, speeding up content creation and ensuring consistency across your team."
+---
+
+Templates give your team a head start every time you create a new article. A template captures the structural layout and any fixed content — such as a branded header, author byline block, or footer — so contributors can focus on the new content rather than rebuilding the same scaffold from scratch. Canvasflow supports an unlimited number of templates per publication, and any article you build can be saved as a template for future reuse.
+
+## What is the Template Manager?
+
+The **Template Manager** is the central place for creating, organising, and maintaining all templates and snippets in a publication. Access it from the menu bar inside any publication.
+
+From the Template Manager you can:
+
+- Create new templates or snippets using the **+** button
+- Open a template in the Template Builder to customise its layout and content
+- Edit the name, description, or associated style of a template via the **Options** button
+- Rename, duplicate, or delete existing templates
+- Create a template directly from an existing article
+
+<Note>
+  When creating a new template, you must associate it with an existing style. This can be changed at any time from within the Template Manager or the Template Builder.
+</Note>
+
+## Templates vs Styles
+
+It is important to understand the distinction between templates and styles, as the two work together but serve different purposes.
+
+<CardGroup cols={2}>
+  <Card title="Templates define structure" icon="table-columns">
+    A template captures the component layout and initial content of an article — for example, a title block, image placeholder, two-column layout, and footer. Templates contain no visual design information.
+  </Card>
+  <Card title="Styles define appearance" icon="palette">
+    A style controls fonts, colours, padding, backgrounds, and spacing. The same template can be displayed using any style, and changing the style never affects the underlying content structure.
+  </Card>
+</CardGroup>
+
+This separation means you can update your brand's visual identity by changing a style without rebuilding your templates, and vice versa.
+
+## Creating a Template
+
+<Steps>
+  <Step title="Navigate to Template Manager">
+    Open the Template Manager from the publication menu bar.
+  </Step>
+  <Step title="Click Add Template">
+    Click the **Add template** button at the top right of the Template Manager.
+  </Step>
+  <Step title="Enter template details">
+    Give your template a **Name** and, optionally, a **Description** that explains what type of article it is designed for.
+  </Step>
+  <Step title="Confirm the type">
+    Ensure **Template** is selected under **Type** (as opposed to Snippet).
+  </Step>
+  <Step title="Select a style">
+    Choose the style you want to associate with the template. This sets the visual design used when previewing and building the template, and becomes the default style for articles created from it.
+  </Step>
+  <Step title="Click Create">
+    Click **Create**. The new template appears in the Template Manager list and is immediately available to select when creating a new article.
+  </Step>
+</Steps>
+
+## Creating a Template from an Existing Article
+
+If you have already built an article with a layout you want to reuse, you can convert it into a template without rebuilding anything.
+
+<Steps>
+  <Step title="Open Article Manager">
+    Navigate to the Article Manager for your publication.
+  </Step>
+  <Step title="Access the article options">
+    Hover over the article you want to use as a template and click the **Edit** menu icon.
+  </Step>
+  <Step title="Select Create Template">
+    Choose **Create Template** from the menu. Canvasflow creates a new template using the article's entire component layout and content.
+  </Step>
+  <Step title="Find the template">
+    Navigate to the Template Manager. The new template appears with the same name as the source article and is ready to rename or further customise.
+  </Step>
+</Steps>
+
+## Editing a Template
+
+You can update a template's metadata or content at any time without affecting articles that have already been created from it.
+
+### Editing template details
+
+<Steps>
+  <Step title="Open Template Manager">
+    Locate the template you want to update.
+  </Step>
+  <Step title="Open the Options menu">
+    Click the **cog** icon in the Options column to open the **Edit template** window.
+  </Step>
+  <Step title="Update the fields">
+    Edit the **Name**, **Description**, and/or the associated **Style**.
+  </Step>
+  <Step title="Save">
+    Click **Update** to apply the changes.
+  </Step>
+</Steps>
+
+<Note>
+  Changing the style associated with a template has no effect on articles that were already created using that template. Only new articles created from the template going forward will use the updated style.
+</Note>
+
+### Editing template content
+
+To update the component layout or content of a template, open it in the **Template Builder** by clicking **Edit** next to the template in the Template Manager. Changes made in the Template Builder apply only to the template itself — they do not retroactively update articles already created from it.
+
+## Deleting a Template
+
+<Steps>
+  <Step title="Open Template Manager">
+    Locate the template you want to delete.
+  </Step>
+  <Step title="Click the Trash icon">
+    Click the **Trash** icon in the Options column. A confirmation popup appears.
+  </Step>
+  <Step title="Confirm">
+    Click **Delete** to permanently remove the template.
+  </Step>
+</Steps>
+
+<Warning>
+  Deleting a template is **permanent and cannot be reversed**. However, deleting a template has **no effect** on articles that were already created from it — those articles remain intact.
+</Warning>
+
+## Snippets
+
+Snippets are a special type of reusable content block that can be inserted into **existing** articles — they are not only available when creating new articles like templates are. Use snippets for recurring content combinations such as author bios, advertisement placements, call-to-action sections, or any other group of components that appears across multiple articles.
+
+### Creating a Snippet
+
+Creating a snippet follows the same steps as creating a template. In the new template dialogue, set the **Type** dropdown to **Snippet** instead of Template.
+
+- A **Snippet** appears in the **Snippets** tab of the Article Builder and can be dragged into any existing article.
+- A **Template** appears only when creating a new article and does not appear in the Snippets tab.
+
+This distinction keeps your Article Builder's Snippets tab focused and uncluttered, especially when you have a large library of article templates you do not want to appear as insertable snippets.
+
+### Using Snippets
+
+<Steps>
+  <Step title="Open an article">
+    Open any article in the Article Builder.
+  </Step>
+  <Step title="Open the Snippets tab">
+    In the Article Components panel, click the **Snippets** tab. All snippets available to the publication are listed.
+  </Step>
+  <Step title="Drag the snippet onto the canvas">
+    Drag the snippet you want to use onto the article canvas. The entire content of the snippet is placed on the canvas and automatically inherits the article's active style.
+  </Step>
+</Steps>
+
+<Tip>
+  Build your snippets library over time as you identify content blocks your team repeats across articles. This turns repetitive manual work into a single drag-and-drop action.
+</Tip>

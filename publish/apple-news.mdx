@@ -1,0 +1,142 @@
+---
+title: "Connect and Publish to Apple News+ with Canvasflow"
+sidebarTitle: "Apple News"
+description: "Connect Canvasflow to Apple News+ and publish responsive articles directly to your Apple News publication using your Channel ID and API keys."
+---
+
+Canvasflow integrates directly with Apple News Publisher, letting you publish articles created in Canvasflow straight to your Apple News+ publication. Once the connector is configured, you can publish content to Apple News from the same Article Manager you use for every other channel — with the option to send articles live immediately or hold them as drafts for review. Before you connect, you will need an active Apple News Publisher account and your channel credentials to hand.
+
+## Prerequisites
+
+Before setting up the connector in Canvasflow, make sure you have:
+
+<CardGroup cols={2}>
+  <Card title="Apple News Publisher Account" icon="apple">
+    An active publisher account at [icloud.com/newspublisher](https://www.icloud.com/newspublisher/). If you don't have a channel yet, see [Creating an Apple News Channel](#creating-an-apple-news-channel) below.
+  </Card>
+  <Card title="API Credentials" icon="key">
+    Your **Channel ID**, **API Key**, and **Secret Key** from the Apple News Publisher settings. See the steps below to locate them.
+  </Card>
+</CardGroup>
+
+---
+
+## Finding Your Channel ID, API Key, and Secret Key
+
+<Steps>
+  <Step title="Log in to Apple News Publisher">
+    Go to [icloud.com/newspublisher](https://www.icloud.com/newspublisher/) and sign in with your Apple ID.
+  </Step>
+  <Step title="Open Settings">
+    Click **Settings** in the top navigation bar.
+  </Step>
+  <Step title="Select Connect CMS">
+    In the sidebar, select **Connect CMS**.
+  </Step>
+  <Step title="Navigate to the Apple News API key">
+    Select **Apple News API**, then click **API Key**.
+  </Step>
+  <Step title="Copy your credentials">
+    Your **Channel ID**, **Apple News API Key**, and **Secret Key** are displayed here. Copy all three — you will need them in the next section.
+  </Step>
+</Steps>
+
+---
+
+## Adding an Apple News Connector in Canvasflow
+
+<Steps>
+  <Step title="Open Publication Settings">
+    In Canvasflow, navigate to the **Brand Manager** or **Publication Manager**, select the publication you want to connect to Apple News, and click the **Settings** button.
+  </Step>
+  <Step title="Add a new Publish Channel">
+    Go to **Publish Channels** and click the **+** button to add a new channel.
+  </Step>
+  <Step title="Select Apple News">
+    Choose **Apple News** from the list of channel types.
+  </Step>
+  <Step title="Enter your credentials">
+    Fill in the following fields:
+
+    - **Channel Name** — A label for this connector (typically the name of your publication).
+    - **Channel ID** — The Channel ID copied from Apple News Publisher.
+    - **API Key** — The API Key copied from Apple News Publisher.
+    - **Secret Key** — The Secret Key copied from Apple News Publisher.
+  </Step>
+  <Step title="Set the Release on Publish behaviour">
+    Choose how articles are handled when you publish from Canvasflow:
+
+    - **Yes** — Articles are published **live** and immediately visible to Apple News readers.
+    - **No** — Articles are sent to Apple News as **Drafts**, giving you a chance to review them before going live.
+  </Step>
+  <Step title="Add the channel">
+    Click **Add Channel**. Your publication is now connected to Apple News and ready to receive content.
+  </Step>
+</Steps>
+
+<Tip>
+  If you want editorial control over what goes live on Apple News, set **Release articles on Publish** to **No**. You can then promote drafts to live from within Apple News Publisher at any time.
+</Tip>
+
+---
+
+## Previewing Content on Apple News
+
+Canvasflow includes its own content preview tools, but it is best practice to proof your articles directly on Apple News+ before releasing them to readers.
+
+<Steps>
+  <Step title="Open Apple News Publisher">
+    Go to [icloud.com/newspublisher](https://www.icloud.com/newspublisher/) and sign in.
+  </Step>
+  <Step title="Navigate to Articles > Drafts">
+    Select **Articles** from the navigation, then choose **Drafts** to view your unpublished content.
+  </Step>
+  <Step title="Preview your article">
+    Click **Preview your articles**.
+  </Step>
+  <Step title="Send the preview link to an iOS device">
+    Copy the preview link provided and send it to yourself to open on an iPhone or iPad.
+
+    Alternatively, if you are on a Mac, click **View** to open the article directly in the News app.
+  </Step>
+</Steps>
+
+<Note>
+  You must be signed in with the same Apple ID that is registered in your News Publisher account to view draft content.
+</Note>
+
+---
+
+## Creating an Apple News Channel
+
+If you do not yet have an Apple News channel, follow these steps to create one before connecting Canvasflow.
+
+<Steps>
+  <Step title="Set up an iCloud account">
+    If you don't already have one, create an iCloud account at [icloud.com](https://www.icloud.com/).
+  </Step>
+  <Step title="Open Apple News Publisher">
+    Navigate to [icloud.com/#newspublisher](https://www.icloud.com/#newspublisher) and sign in.
+  </Step>
+  <Step title="Enter publisher and channel information">
+    Follow the on-screen prompts to add your publication details, including:
+
+    - **Website URL**
+    - **Audience** — General, Mature, or Children
+  </Step>
+  <Step title="Add a logo and channel icon">
+    Upload a logo and channel icon that meet Apple's guidelines:
+
+    - Format: **PNG**
+    - Size: **Less than 2 MB**
+    - Content: **Text only** (must match the name of the publication)
+
+    See [Apple's Logo Guidelines](https://support.apple.com/en-gb/guide/news-publisher/apd7c9ae979c/icloud) for full requirements.
+  </Step>
+  <Step title="Continue through setup">
+    Click **Next** to proceed to the contact information page. Fill in any required details.
+  </Step>
+  <Step title="Create the channel">
+    Click **Next** again to create your channel. You can now retrieve your Channel ID and API credentials from the settings as described above.
+  </Step>
+</Steps>

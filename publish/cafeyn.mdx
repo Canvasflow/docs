@@ -1,0 +1,71 @@
+---
+title: "Connect Canvasflow to Cafeyn and Publish Your Issues"
+sidebarTitle: "Cafeyn"
+description: "Connect Canvasflow to the Cafeyn digital newsstand, configure a publish channel, and deliver packaged issues directly to Cafeyn subscribers."
+---
+
+Cafeyn is a digital newsstand that gives subscribers unlimited access to magazines and newspapers across their devices. Canvasflow's Cafeyn integration lets you package your published articles into a structured ZIP archive containing a JSON manifest and all associated images, ready to submit to Cafeyn through your usual delivery method.
+
+## Overview
+
+To distribute an issue to Cafeyn from Canvasflow, you first add a Cafeyn publish channel to your brand, configure your issue with a release date, publish your articles, and then use the **Create Cafeyn** action to generate the downloadable package. The resulting ZIP file is then submitted to Cafeyn directly.
+
+## Connecting to Cafeyn
+
+<Steps>
+  <Step title="Open Brand Manager">
+    Navigate to **Brand Manager** in Canvasflow.
+  </Step>
+  <Step title="Open Brand Settings">
+    Hover over the brand you want to connect and click the `Settings` icon to open **Brand Settings**.
+  </Step>
+  <Step title="Go to Publish Channels">
+    Select the **Publish Channels** tab.
+  </Step>
+  <Step title="Add a new channel">
+    Click the **Add New** icon to begin adding a channel.
+  </Step>
+  <Step title="Configure the Cafeyn channel">
+    Enter a **Channel Name** for the channel, then select `Cafeyn` from the **Channel Selector** dropdown.
+  </Step>
+  <Step title="Enter FTP details (if applicable)">
+    If your Cafeyn delivery agreement requires FTP submission, enter the required FTP credentials at this step.
+  </Step>
+  <Step title="Save the channel">
+    Click **Add Channel**. The Cafeyn channel is now attached to your brand.
+  </Step>
+</Steps>
+
+<Note>
+  If you are unsure whether FTP delivery is required for your Cafeyn account, contact your Cafeyn account manager before completing the channel setup.
+</Note>
+
+## Publishing to Cafeyn
+
+Once your Cafeyn channel is configured, follow these steps whenever you want to publish a new issue.
+
+<Steps>
+  <Step title="Set the Release Date">
+    Navigate to **Issue Manager** and click the `Settings` icon for the issue you want to publish. Enter a **Release Date** — this field is mandatory for Cafeyn publishing. Click `Update` to save.
+  </Step>
+  <Step title="Go to Article Manager">
+    Navigate to the **Article Manager** view for the issue.
+  </Step>
+  <Step title="Publish your articles">
+    Tick the checkboxes next to all the articles you want to include in the Cafeyn issue, then click **Publish Selected** in the toolbar. Only published articles will be included in the output package.
+  </Step>
+  <Step title="Create the Cafeyn package">
+    Once the articles are published, click the **Create Cafeyn** button in the toolbar. Canvasflow will compile all published articles and their associated images into a ZIP archive.
+  </Step>
+  <Step title="Submit to Cafeyn">
+    When the download completes, you will have a ZIP file containing all associated images and a `.json` file. Submit this package to Cafeyn via your usual delivery method.
+  </Step>
+</Steps>
+
+<Warning>
+  The **Release Date** is a mandatory field for Cafeyn. Ensure it is set in Issue Settings before attempting to create the Cafeyn package, otherwise the output will be incomplete.
+</Warning>
+
+<Tip>
+  Make sure all articles are in their final state before clicking **Publish Selected**. If you edit an article after publishing, re-publish it before generating the Cafeyn package to ensure the latest content is included in the ZIP.
+</Tip>

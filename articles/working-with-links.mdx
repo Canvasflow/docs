@@ -1,0 +1,213 @@
+---
+title: "Working with Links: URLs, Page Links, and Custom Schemes"
+sidebarTitle: "Links"
+description: "Add web URLs, email links, page links, custom URL schemes, and hidden content links to text and image components in Canvasflow articles."
+---
+
+Canvasflow supports a variety of link types across both text and media components. You can link highlighted text or images to external web pages, to other articles within the same issue, to specific locations within the same article using anchors, to content inside third-party app platforms using custom URL schemes, and even to content that is intentionally hidden from your main navigation. This guide covers every link type and explains how to add each one.
+
+---
+
+## Link Types at a Glance
+
+<CardGroup cols={2}>
+  <Card title="Web URL" icon="link">
+    Link to any external webpage, including mailto: email addresses. Available on both text and image components.
+  </Card>
+  <Card title="Page Link" icon="file">
+    Link directly to another article within the same issue. Supported on PWA, Paperlit, Pugpig, and Maz channels.
+  </Card>
+  <Card title="Custom URL Scheme" icon="mobile">
+    Link to other articles or collections within a Twixl Publisher app. Uses `tp-collection://` and `tp-pagelink://` protocols.
+  </Card>
+  <Card title="Hidden Content Link" icon="eye-slash">
+    Link to an article that is published but hidden from the main app navigation, accessible only via direct link. Primarily used with Twixl Publisher.
+  </Card>
+</CardGroup>
+
+---
+
+## Adding Web URL Links in Text
+
+You can link any portion of text in a Canvasflow article to an external web address.
+
+<Steps>
+  <Step title="Highlight the text">
+    In the Article Builder, highlight the text you want to turn into a link.
+  </Step>
+  <Step title="Click the Link icon">
+    In the text formatting toolbar that appears, click the **Link** icon.
+  </Step>
+  <Step title="Enter the URL">
+    Type or paste the destination URL into the URL field. Choose whether the link opens in a new window or redirects in the current one.
+  </Step>
+  <Step title="Save">
+    Save the article to confirm the link.
+  </Step>
+</Steps>
+
+---
+
+## Adding Email (Mailto) Links
+
+A mailto link automatically opens the reader's default email client with a pre-defined recipient address when clicked.
+
+<Steps>
+  <Step title="Highlight the link text">
+    In the Article Builder, highlight the text you want readers to click.
+  </Step>
+  <Step title="Click the Link icon">
+    Select the **Link** icon at the right end of the formatting toolbar.
+  </Step>
+  <Step title="Enter the mailto URL">
+    Enter a valid mailto link in the format:
+
+    ```
+    mailto:help@canvasflow.io
+    ```
+
+    You can also pre-fill the subject line, body, or CC fields using standard mailto parameters.
+  </Step>
+</Steps>
+
+---
+
+## Adding Links to Images
+
+You can attach a link to any image component, so readers can tap or click the image to navigate elsewhere.
+
+<Steps>
+  <Step title="Select the image">
+    In the Article Builder, click on the image component to open the Image Properties panel.
+  </Step>
+  <Step title="Set the link">
+    In the **Link** field, choose **External URL** and enter the destination address, or choose **Internal Page** to select an article in the same issue from the dropdown list.
+  </Step>
+  <Step title="Set Open in New Window">
+    Choose whether selecting the image opens the link in a new browser tab or redirects in the current window.
+  </Step>
+  <Step title="Save">
+    Save the article to confirm the change.
+  </Step>
+</Steps>
+
+---
+
+## Page Links
+
+Page links connect directly to another article in the same issue without requiring you to enter a URL manually. They are supported on **PWA**, **Paperlit**, **Pugpig**, and **Maz** channels.
+
+### Creating a page link from text
+
+<Steps>
+  <Step title="Highlight the text">
+    In the Article Builder, highlight the text you want to use as the link.
+  </Step>
+  <Step title="Click the Page Link button">
+    In the Text Editor Toolbar, select the **Page Link** button.
+  </Step>
+  <Step title="Select the target article">
+    A list of all articles in the current issue appears. Select the article you want to link to and click **OK**.
+  </Step>
+  <Step title="Save">
+    Save the article to confirm the page link.
+  </Step>
+</Steps>
+
+### Creating a page link from an image
+
+<Steps>
+  <Step title="Select the image">
+    In the Article Builder, click the image you want to link from.
+  </Step>
+  <Step title="Open the Link setting">
+    In the Image Properties panel, under **Link**, select **Page**.
+  </Step>
+  <Step title="Choose the target article">
+    A list of all articles in the current issue appears. Select the article you want to link to.
+  </Step>
+  <Step title="Save">
+    Click **Save** to confirm the change.
+  </Step>
+</Steps>
+
+---
+
+## Custom URL Schemes
+
+Custom URL schemes let you link to specific articles, issues, or collections within a Twixl Publisher app. Unlike standard web URLs, these schemes resolve to content within the app rather than a webpage.
+
+### Linking to a content item within a collection
+
+Use the `tp-collection://` scheme to link to a specific article within a named Twixl collection:
+
+```
+tp-collection://TWIXL-COLLECTION-NAME/TWIXL-ARTICLE-NAME
+```
+
+Replace `TWIXL-COLLECTION-NAME` with the alphanumeric ID of the collection and `TWIXL-ARTICLE-NAME` with the alphanumeric ID of the article — not the display titles.
+
+### Linking to an article in the same collection
+
+Use the `tp-pagelink://` scheme to link to an article within the same collection as the article you are editing:
+
+```
+tp-pagelink://TWIXL-ARTICLE-NAME
+```
+
+### Applying a custom URL scheme
+
+You can enter a custom URL scheme in:
+- The **URL** field when creating a text hyperlink
+- The **URL** field of a Button component
+- The **Link** field of an Image component (using the External URL option)
+
+<Note>
+  The `tp-collection://` and `tp-pagelink://` schemes are specific to Twixl Publisher. Other app distribution platforms may support different URL scheme formats — refer to your platform's documentation for details.
+</Note>
+
+---
+
+## Linking to Hidden Content
+
+There are situations where you want to give readers access to a piece of content via a direct link, but keep that content out of your main app navigation. This is achieved by combining a hidden cell style in Twixl with a custom URL scheme link in Canvasflow.
+
+<Steps>
+  <Step title="Create a hidden cell style in Twixl">
+    In Twixl Publisher, create a new cell style — for example, named `HiddenContent`. Set its structure to zero columns and zero rows across Mobile, Tablet, and Desktop, then save it.
+  </Step>
+  <Step title="Apply the hidden style to the article in Canvasflow">
+    In Canvasflow, open or create the article you want to hide. From the **Edit** menu in the Article Manager, apply the `HiddenContent` cell style to it.
+  </Step>
+  <Step title="Move the content to a hidden collection (recommended)">
+    In Twixl, create a dedicated collection — for example, `HiddenCollection` — used solely to store content accessible only via links. Move the hidden content item into this collection to keep your publication organised.
+  </Step>
+  <Step title="Add the link in Canvasflow">
+    Navigate to the article where you want to place the link. Highlight the link text, click the **Hyperlink** icon, and enter the custom URL scheme:
+
+    ```
+    tp-collection://TWIXL-COLLECTION-NAME/TWIXL-ARTICLE-NAME
+    ```
+
+    Replace `TWIXL-COLLECTION-NAME` and `TWIXL-ARTICLE-NAME` with the alphanumeric IDs found in the Twixl Distribution Platform.
+  </Step>
+  <Step title="Publish">
+    Publish the content. The article will be published and accessible via the link, but will not appear in the Twixl app's front-end navigation.
+  </Step>
+</Steps>
+
+<Note>
+  If you want to place the hidden content in the same collection as the article it is linked from — rather than in a dedicated hidden collection — you can use `tp-pagelink://TWIXL-ARTICLE-NAME` as the link URL. This is not recommended for most use cases as it can make your collection harder to manage.
+</Note>
+
+<Warning>
+  The hidden content approach relies on the `HiddenContent` cell style having zero rows and columns configured in Twixl. Ensure this is set correctly in Twixl before publishing, or the article may still appear in your app navigation.
+</Warning>
+
+---
+
+## Opening Links in a New Window
+
+Both text links and image links support an **Open in New Window** option. When enabled, selecting the link opens the destination in a new browser tab rather than navigating away from the current article. When disabled, the link redirects in the current window.
+
+You can set this option when creating or editing a text hyperlink, in the Image Properties panel for image links, and in the Button component's properties.

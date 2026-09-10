@@ -1,0 +1,255 @@
+---
+title: "How to Publish Content to Twixl Publisher from Canvasflow"
+sidebarTitle: "Twixl"
+description: "Connect Canvasflow to Twixl Publisher, organise your content into collections with cell styles, and publish articles directly to your Twixl-powered app."
+---
+
+Twixl Publisher is a cloud-based publishing solution designed to help you create and distribute mobile content applications. When you connect Canvasflow to Twixl Publisher, you can author and enrich your content inside Canvasflow and then push it directly to your Twixl-powered app — handling everything from individual articles to organised collections, custom cell styles, push notifications, and navigation menus, all from a single interface.
+
+## Connecting to Twixl Publisher
+
+Before you can publish to Twixl, you need to connect your Canvasflow brand to your Twixl Publisher account using API keys.
+
+<Steps>
+  <Step title="Open Brand Settings">
+    From **Brand Manager**, select the brand you want to connect and click the `Settings` button.
+  </Step>
+  <Step title="Add a Publish Channel">
+    Go to **Publish Channel** and click the `+` button to add a new channel.
+  </Step>
+  <Step title="Select Twixl Publisher">
+    Choose `Twixl Publisher` from the list of available channels.
+  </Step>
+  <Step title="Name the channel">
+    Give the channel a name. Using the same name as your Twixl app makes it easier to identify later.
+  </Step>
+  <Step title="Enter your API keys">
+    Enter your **App** API key and your **Admin API** key. You can find both keys in your [Twixl Publisher account](https://platform.twixlmedia.com/account/api).
+  </Step>
+  <Step title="Choose a publish option">
+    Select the publish option that suits your workflow:
+
+    - **Upload & Publish** *(recommended)* — Publishes articles directly to your Twixl Distribution account and makes them live in your app immediately. Best when all your content is managed in Canvasflow and you do not need to edit it inside Twixl Publisher before going live.
+    - **Upload** — Uploads content to your Twixl Distribution account but does **not** publish it to the app. Use this option when you work with additional Twixl content types or need to review and edit the publication inside Twixl Publisher before releasing it.
+  </Step>
+  <Step title="Save and validate">
+    Click `Add Channel`. Canvasflow will validate both API keys automatically. If validation succeeds, the channel is added to your brand and you can begin publishing content to Twixl directly from Canvasflow.
+  </Step>
+</Steps>
+
+<Warning>
+  You must be logged into your Twixl Distribution Platform account and have the target app open before attempting to connect. If API key validation fails, double-check that both keys are correct and have not expired.
+</Warning>
+
+## Twixl Articles
+
+When a brand is connected to a Twixl Publisher channel, additional article options become available inside Canvasflow's **Article Editor** and **Article Manager**.
+
+### Article editor options
+
+- **Content Type** — Because the Canvasflow–Twixl integration supports Twixl content items, you can select specific content types for an article, including PDF, MP4, Image, and others.
+- **Cell Style** — Assign a cell style (created in the Twixl Distribution Platform) to an article. Cell styles control how the article tile appears in your app's grid layout. The style name includes its column/row dimensions — for example, `T: 6x3` means the tablet layout is 6 columns wide and 3 rows deep, while `P: 4x2` denotes a phone layout of 4 columns wide and 2 rows deep.
+
+### Article Manager options
+
+In addition to the standard article controls, the following extra actions become available in Article Manager when a Twixl channel is connected:
+
+| Action | Description |
+|--------|-------------|
+| **Metadata** | Edit the article's Author, Tagline, Category, and Social Text. |
+| **Duplicate** | Create a copy of an article or content item. |
+| **Move** | Move an article or content item into a collection or a different issue. |
+
+## Twixl Content Items
+
+When your brand is connected to a Twixl app, the option to add **Twixl Content Items** becomes available from the Article Manager menu. Content items are non-article assets — such as standalone PDFs, videos, or images — that you want to surface directly inside your app alongside your articles.
+
+<Note>
+  For full details on working with Twixl Content Items, refer to the [Twixl support documentation on content items](https://help.twixlmedia.com/hc/en-us/articles/115000718185-Working-with-content-items).
+</Note>
+
+## Twixl Collections
+
+Collections let you group related articles and content items into a structured folder hierarchy inside your Twixl app. You create and manage collections directly from the Canvasflow Article Manager.
+
+### Creating a new collection
+
+<Steps>
+  <Step title="Go to your brand">
+    Navigate to the required brand in Canvasflow.
+  </Step>
+  <Step title="Click the Collection icon">
+    From **Article Manager**, click the `Collection` icon in the toolbar.
+  </Step>
+  <Step title="Name the collection">
+    Assign a name to the collection and click `Create`. The collection is created in both Canvasflow and your Twixl app simultaneously.
+  </Step>
+</Steps>
+
+### Moving content into a collection
+
+After creating a collection you can move existing articles into it at any time.
+
+<Steps>
+  <Step title="Locate the article">
+    Find the article you want to move in Article Manager and open its `Edit` menu.
+  </Step>
+  <Step title="Select Move">
+    Choose `Move` from the menu.
+  </Step>
+  <Step title="Select the destination collection">
+    In the dropdown, select the collection you want to move the article into. The article is immediately moved in both Canvasflow and your Twixl app.
+  </Step>
+</Steps>
+
+### Publishing an article directly into a collection
+
+You can also publish unpublished articles directly into a specific collection without moving them first.
+
+<Steps>
+  <Step title="Select a collection">
+    From Article Manager, navigate to the collection you want to publish content into.
+  </Step>
+  <Step title="Find the unpublished article">
+    Scroll to the bottom of Article Manager to the **Unpublished Articles** section and locate the article you want to publish.
+  </Step>
+  <Step title="Publish into the collection">
+    Click the `Publish Article` icon. The article is published into the currently selected collection.
+  </Step>
+</Steps>
+
+## Applying a Twixl Cell Style
+
+Once a brand is connected to Twixl, you can apply **Cell Styles** when creating or editing any article, collection, or content item. Cell styles are defined in the Twixl Distribution Platform and control the visual appearance and size of content tiles in your app's layout.
+
+To apply or change a cell style, open the article's `Edit` menu in Article Manager and select the desired style from the **Cell Style** dropdown. The display name of each style includes its column and row dimensions to help you choose the right layout.
+
+<Note>
+  Cell styles must be created in the Twixl Distribution Platform before they appear in Canvasflow. For guidance on creating cell styles, see the [Twixl cell styles documentation](https://help.twixlmedia.com/hc/en-us/articles/115000718205-Working-with-cell-styles).
+</Note>
+
+## Publishing to Twixl
+
+Canvasflow tracks the publish state of every article connected to your Twixl channel. Each article is in one of three states, indicated by the colour of its publish button in Article Manager:
+
+<CardGroup cols={3}>
+  <Card title="Unpublished" icon="circle" iconType="solid" color="#9ca3af">
+    The article exists in Canvasflow but has not yet been sent to Twixl, or was previously unpublished. Unpublished articles appear at the bottom of Article Manager in the **Unpublished Articles** section.
+  </Card>
+  <Card title="Published (in sync)" icon="circle" iconType="solid" color="#22c55e">
+    The article is live on Twixl and the version in Canvasflow matches the live version exactly.
+  </Card>
+  <Card title="Published (out of sync)" icon="circle" iconType="solid" color="#eab308">
+    The article is live on Twixl but the version in Canvasflow is newer. Re-publish the article to push your changes live.
+  </Card>
+</CardGroup>
+
+### Adding a custom thumbnail
+
+If you want to use a custom thumbnail for an article rather than letting Twixl use the first image by default, upload the thumbnail **after** the article has been published to Twixl.
+
+<Steps>
+  <Step title="Locate the content">
+    Find the article or content item in Article Manager.
+  </Step>
+  <Step title="Open the Edit menu">
+    Click the `Edit` menu for that article.
+  </Step>
+  <Step title="Upload the thumbnail">
+    Select `Change Thumbnail` and choose the image you want to use.
+  </Step>
+</Steps>
+
+## Sending Push Notifications
+
+Canvasflow lets you send Twixl push notifications to all app users directly from the platform, without needing to log into the Twixl Distribution Platform separately.
+
+<Steps>
+  <Step title="Open Brand Manager">
+    Navigate to **Brand Manager** in Canvasflow.
+  </Step>
+  <Step title="Click the Push Notification button">
+    Hover over the Twixl-connected publication and click the `Push Notification` button that appears.
+  </Step>
+  <Step title="Write and send your message">
+    In the popup window, type the message you want to send and click `Send`. The notification is delivered to all app users who have push notifications enabled on their device.
+  </Step>
+  <Step title="Close the popup">
+    Click `X` to close the notification popup.
+  </Step>
+</Steps>
+
+## Using the Hamburger Menu
+
+Canvasflow supports the Twixl Hamburger Menu, allowing you to add and manage navigation items for each brand connected to a Twixl app. Hamburger menu options are found inside the **Article Manager** of the relevant brand.
+
+### Enabling the Hamburger Menu
+
+The Hamburger Menu must first be enabled inside the Twixl Distribution Platform before it will appear in your app.
+
+<Steps>
+  <Step title="Log into Twixl">
+    Log into your [Twixl Distribution account](https://platform.twixlmedia.com/) and select the appropriate app.
+  </Step>
+  <Step title="Edit the application">
+    From **Application Home**, open the dropdown and select `Edit Application`.
+  </Step>
+  <Step title="Enable the menu">
+    Scroll down to **Hamburger Menu** and tick the checkbox labelled `Use Hamburger Menu`.
+  </Step>
+  <Step title="Save">
+    Click `Save`.
+  </Step>
+</Steps>
+
+### Adding Hamburger Menu items
+
+From the Hamburger Menu options page in Canvasflow, click `Create Hamburger Menu item`. You can add three types of items:
+
+<CardGroup cols={3}>
+  <Card title="Collection Link" icon="folder">
+    Link directly to a specific collection within your app using the dropdown menu.
+  </Card>
+  <Card title="Placeholder" icon="image">
+    Add an image asset, such as a header or divider, to the Hamburger Menu.
+  </Card>
+  <Card title="Web Link" icon="globe">
+    Add a URL to link directly to an external website from the menu.
+  </Card>
+</CardGroup>
+
+### Reordering Hamburger Menu items
+
+To reorder items, click and drag the `Move` icon next to each item. Changes are reflected in your Twixl app immediately — you do not need to re-publish your content.
+
+<Note>
+  Any changes made to the Hamburger Menu take effect in your app right away, without requiring a re-publish of your articles.
+</Note>
+
+## Custom URL Schemes
+
+When connected to a Twixl Publisher channel, you can use custom URL schemes to create deep links from within your content — linking directly to a specific collection, article, or an article within a collection.
+
+### Linking to content within a collection
+
+To link to a Twixl content item inside a collection, use the `tp-collection://` scheme:
+
+```
+tp-collection://TWIXL-COLLECTION-NAME/TWIXL-ARTICLE-NAME
+```
+
+### Linking to an article in the same collection
+
+To link to another article within the same collection, use the `tp-pagelink://` scheme:
+
+```
+tp-pagelink://TWIXL-ARTICLE-NAME
+```
+
+<Note>
+  Replace `TWIXL-COLLECTION-NAME` and `TWIXL-ARTICLE-NAME` with the exact names used in your Twixl Distribution Platform. Names are case-sensitive.
+</Note>
+
+<Tip>
+  For a full reference of all supported custom URL schemes for article-based Twixl apps, refer to the [Twixl custom URL schemes documentation](https://help.twixlmedia.com/hc/en-us/articles/115000718165-Custom-URL-schemes).
+</Tip>

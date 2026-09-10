@@ -1,0 +1,327 @@
+---
+title: "Article Builder: Build and Edit Articles in Canvasflow"
+sidebarTitle: "Article Builder"
+description: "Master the Canvasflow Article Builder: add and arrange components, use columns, preview on different devices, use hotkeys, and save your work."
+---
+
+The Article Builder is Canvasflow's drag-and-drop HTML5 editor where you build the visual content of every article. You open it by clicking into an article from the Article Manager. Inside, a Component Panel on one side lists everything you can add to the canvas — from simple text blocks to rich media, columns, and interactive embeds — while the canvas itself expands automatically to fit however much content you add. The Builder also gives you real-time style switching, device previews, and multiple ways to navigate, move, and organise your work.
+
+---
+
+## The Component Panel
+
+The Component Panel sits to the side of the canvas and organises all available components into categories — Text, Media, Layout, Embeds, and Snippets. Click a category heading to expand it and reveal the individual components inside. From there you drag the component you want onto the canvas.
+
+<Tip>
+  Hold the **Alt** key at any time while inside the Article Builder to display the type label of every component currently on the canvas. This is useful when you have a densely packed article and need to identify specific elements quickly.
+</Tip>
+
+---
+
+## Adding Components
+
+Components are the building blocks of every Canvasflow article. There is no limit to how many you can add — the canvas grows to fit them all.
+
+<Steps>
+  <Step title="Open a category">
+    In the Component Panel, click the category heading for the type of component you want to add. The available components for that category expand below.
+  </Step>
+  <Step title="Drag onto the canvas">
+    Click and drag the component onto the canvas. As you move it, all valid drop zones highlight to show you where the component can be placed.
+  </Step>
+  <Step title="Follow the arrow indicator">
+    As you approach a valid drop zone, an arrow appears showing exactly where the component will land if you release.
+  </Step>
+  <Step title="Release to place">
+    Drop the component in the desired location. It appears on the canvas and is ready to edit.
+  </Step>
+</Steps>
+
+---
+
+## Moving Components
+
+After placing a component you can reorder or reposition it at any time using the inline controls on the component toolbar.
+
+### Using the up/down arrows
+
+<Steps>
+  <Step title="Hover over the component">
+    Hover over the component you want to move. The component toolbar appears on the left side.
+  </Step>
+  <Step title="Click the arrows">
+    Click the **up** arrow to move the component up, or the **down** arrow to move it down. Repeat until the component is in the correct position.
+  </Step>
+</Steps>
+
+### Dragging a component
+
+<Steps>
+  <Step title="Find the drag handle">
+    In the top-right corner of the component, locate the drag button.
+  </Step>
+  <Step title="Drag to the new location">
+    Click and drag the button to move the component to any position on the canvas.
+  </Step>
+</Steps>
+
+### Swapping two components
+
+You can swap any two components directly — regardless of type or position — without cutting and pasting their content.
+
+<Steps>
+  <Step title="Use the Move icon">
+    Click and drag using the **Move** icon on the component you want to swap.
+  </Step>
+  <Step title="Drop onto the target">
+    Drop the component onto the one you want to swap it with. Both components — including all their content — exchange positions on the canvas.
+  </Step>
+</Steps>
+
+---
+
+## Deleting Components
+
+<Steps>
+  <Step title="Hover to reveal the toolbar">
+    Hover over the component you want to delete. The component toolbar appears to the left.
+  </Step>
+  <Step title="Click the Trash icon">
+    Click the **Trash** icon. A confirmation popup appears.
+  </Step>
+  <Step title="Confirm">
+    Click **Delete**. The component is removed from the canvas.
+  </Step>
+  <Step title="Save">
+    Save the article to make the deletion permanent.
+  </Step>
+</Steps>
+
+<Warning>
+  Once you save after deleting a component, the deletion is permanent. If you delete a component by mistake and have not yet saved, refresh the browser to restore the article to your last saved state.
+
+  Deleting a column component that has a style block attached does **not** delete the style block itself — it only removes it from the current article.
+</Warning>
+
+---
+
+## Working with Columns
+
+The Column component lets you organise content into up to four parallel columns. Text and media components can each be placed inside a column, giving you fine-grained control over page structure.
+
+### Setting column properties
+
+Once a column is on the canvas, hover over it and click the **Edit** button to open the properties menu.
+
+<Accordion title="Column Split">
+  By default, a new column divides space equally — 50/50 for a 2-column block, 33/33/33 for three columns, and so on. Use the **Column Split** menu to set custom percentages. The article updates immediately as you adjust the values.
+</Accordion>
+
+<Accordion title="Container Width">
+  Controls the overall width of the column container on the page. The default is 100%.
+</Accordion>
+
+<Accordion title="Full Bleed">
+  Full Bleed only applies when a Custom Style Block is attached to the column. With one attached, it expands the style block's background image or colour to fill the full width.
+</Accordion>
+
+<Accordion title="Alignment">
+  Controls the horizontal alignment of a single-column block. Alignment changes only take effect when the container width is set below 100%.
+</Accordion>
+
+<Accordion title="Collapse Action">
+  By default, columns collapse into a single column on mobile devices. To prevent this — for example, when displaying a row of logos — set the **Collapse Action** to **Never**. You can also choose to collapse at tablet portrait orientation.
+</Accordion>
+
+<Accordion title="Column Ordering (Mobile First)">
+  When columns collapse on mobile, content appears left-to-right. Switch to **Mobile First** order to reverse the column order on desktop and landscape tablet. This is useful when your preferred mobile reading order differs from the desktop layout. Remember that in Mobile First mode, the column order in the Article Builder should reflect the order you want on mobile devices.
+</Accordion>
+
+### Multi-columns
+
+Multi-columns create a print-inspired layout that automatically wraps and balances content across as many columns as the viewport can fit. When the viewport narrows to the point where fewer than two columns can fit at the specified column width, the layout reverts gracefully to a single column.
+
+<Note>
+  A 1x column cannot be split but its width can be set. 4x columns can only be divided equally. Multi-columns cannot be customised in the same way as standard columns — the multi-column definition controls how content appears when published.
+</Note>
+
+---
+
+## Changing the Article Style
+
+You can switch the style applied to an article at any time without leaving the Article Builder.
+
+<Steps>
+  <Step title="Open the Style menu">
+    In the article menu bar, click the **Style** button. A list of all available styles appears.
+  </Step>
+  <Step title="Select a style">
+    Click the style you want to apply. It takes effect on the canvas immediately.
+  </Step>
+  <Step title="Close and save">
+    Click outside the style menu to close it, then click **Save** to confirm the change.
+  </Step>
+</Steps>
+
+To edit the currently applied style, click **Style**, then click **Edit** next to the selected style. You are taken to the Style Builder. When you are done, click **Return to article** to come back to your work.
+
+<Warning>
+  Editing a style navigates you away from the article. Save the article before clicking Edit to avoid losing any unsaved changes.
+</Warning>
+
+---
+
+## Preview Mode
+
+Preview mode shows you exactly how the published article will look on a specific device, without the editor overlay and without needing to publish.
+
+<Steps>
+  <Step title="Open Workspace">
+    From the menu, click **Workspace**.
+  </Step>
+  <Step title="Activate Device Preview">
+    Click the **Device Preview** button in the Workspace Options section. The canvas switches to Preview Mode.
+  </Step>
+  <Step title="Scroll and switch devices">
+    Use the scrollbar to scroll through the article. Click a different workspace option to preview the article on a different device type — Desktop, Tablet, or Mobile.
+  </Step>
+  <Step title="Toggle hidden components (optional)">
+    Click the **Hidden Components** toggle to make device-ineligible components visible at 50% transparency instead of hidden. This helps you audit which components will appear on each device type.
+  </Step>
+  <Step title="Exit preview">
+    Click the **X** button to return to the editing canvas.
+  </Step>
+</Steps>
+
+<Note>
+  In Preview Mode, all editing features are disabled except the ability to switch the current style. The Hidden Components toggle is only available while in Preview Mode.
+</Note>
+
+---
+
+## Saving Your Work
+
+### Manual save
+
+Click the **Save** button at the top right of the Article Builder at any time. A brief confirmation message appears on screen when the save completes successfully.
+
+<Note>
+  Publishing an article from within the Article Builder also saves it automatically, if your connected channel supports in-builder publishing.
+</Note>
+
+### Auto-save
+
+Enable Auto-Save in your profile preferences to have Canvasflow save your article, style, and template content automatically every 15 seconds.
+
+<Steps>
+  <Step title="Open Profile">
+    From the Brand Manager, click your name in the menu bar to open your Profile.
+  </Step>
+  <Step title="Toggle Auto-Save">
+    Under **Preferences** in the left panel, check or uncheck the **Autosave** box as required.
+  </Step>
+</Steps>
+
+<Tip>
+  Save frequently, especially before switching styles or navigating away. Regular saving is strongly recommended even with Auto-Save enabled.
+</Tip>
+
+---
+
+## The Article Navigator
+
+The Article Navigator lets you switch between articles in the same publication without leaving the editor.
+
+<Steps>
+  <Step title="Save your current article">
+    Save any unsaved changes to your current article.
+  </Step>
+  <Step title="Open the Navigator">
+    In the Article Builder, click the **Navigator** icon next to the Article Manager button. A dropdown lists all articles in the current publication.
+  </Step>
+  <Step title="Select an article">
+    Click any article in the list to switch to it immediately.
+  </Step>
+</Steps>
+
+<Tip>
+  If your publication has a large number of articles, enable **Display as Grid** from the Navigator dropdown for a visual grid layout that makes scanning easier.
+</Tip>
+
+---
+
+## The Magic Key
+
+The Magic Key is a modifier that unlocks alternate behaviour when you drag components, letting you perform advanced actions without any extra menu steps.
+
+To activate it, hold **Cmd** (macOS) or **Ctrl** (Windows) while dragging a component. A tooltip appears showing what action will be performed if you drop the component.
+
+| Action | Normal result | Magic Key result |
+|---|---|---|
+| Drag text component onto canvas | Drop in a line break | Replace the text type of an existing component (e.g. Subtitle → Intro) |
+| Drag new component onto existing component | Place above or below | Replace the existing component |
+| Drag text component onto media component | Swap positions | Add the text as a caption (if applicable) |
+| Drag image component onto image component | Swap positions | Create a gallery from both images |
+| Drag text component onto text component | Place in a break | Merge the two text blocks |
+
+---
+
+## Hotkeys Reference
+
+The following keyboard shortcuts are available inside the Article Builder to speed up common tasks.
+
+<Accordion title="View all hotkeys">
+
+| Function | Hotkey |
+|---|---|
+| Save | `Cmd / Ctrl + S` |
+| Publish | `Cmd / Ctrl + P` |
+| Delete without confirmation prompt | `Cmd / Ctrl + Delete` |
+| Create gallery | `Cmd / Ctrl` + drop image onto image |
+| Create caption from text | `Cmd / Ctrl` + drop text onto image or gallery |
+| Add image to gallery | `Cmd / Ctrl` + drop image onto gallery |
+| Convert to 2-column layout | `Cmd / Ctrl` + drop text component onto existing text component |
+| Display component type labels | Hold `Alt` |
+
+</Accordion>
+
+---
+
+## Pasting Content from External Sources
+
+When you paste content from Microsoft Word, InDesign, or another external source, inline styles such as font size, colour, and background colour may come across with the text and override your Canvasflow style. There are two ways to prevent this.
+
+### Paste as plain text (recommended)
+
+Pasting as plain text strips all inline formatting from the source, ensuring your Canvasflow style controls the appearance entirely.
+
+<Steps>
+  <Step title="Copy your content">
+    Copy the text from your external source as normal.
+  </Step>
+  <Step title="Paste without formatting">
+    In Canvasflow, right-click inside the text component and select **Paste and Match Style** (macOS) or **Paste as Plain Text** (Windows).
+
+    - **Windows shortcut:** `Ctrl + Shift + V`
+    - **macOS shortcut:** `Option + Shift + Cmd + V`
+  </Step>
+  <Step title="Continue editing">
+    Save the article or continue working as normal.
+  </Step>
+</Steps>
+
+### Remove inline formatting after pasting
+
+If you have already pasted formatted content and want to clean it up:
+
+<Steps>
+  <Step title="Select the affected text">
+    Highlight the text that has unwanted formatting applied.
+  </Step>
+  <Step title="Click Remove Formatting">
+    In the text formatting toolbar, click the **Remove Formatting** button. All inline markup is stripped from the selection.
+  </Step>
+  <Step title="Save">
+    Save the article to confirm the change.
+  </Step>
+</Steps>

@@ -1,0 +1,152 @@
+---
+title: "Import WordPress Posts into Canvasflow Automatically"
+sidebarTitle: "WordPress Import"
+description: "Use the WordPress-to-Canvasflow plugin to pull posts from your WordPress site directly into Canvasflow for editing and multi-channel publishing."
+---
+
+The Canvasflow for WordPress plugin gives your editorial team a fast, code-free way to push blog posts and pages from WordPress directly into a Canvasflow publication. Once connected, a **Canvasflow Publish Widget** appears inside the WordPress post editor, letting you publish individual articles to Canvasflow without leaving your existing workflow. A bulk **Posts Manager** and **Upload Manager** are also available for managing larger volumes of content.
+
+<Note>
+  Before you begin, [request a WordPress API key](https://canvasflow.io/apikey-request) from Canvasflow to enable WordPress publishing for your account.
+</Note>
+
+---
+
+## How the Integration Works
+
+Publishing content from WordPress to Canvasflow is controlled from two places:
+
+<CardGroup cols={2}>
+  <Card title="WordPress Plugin (Push)" icon="wordpress">
+    The plugin installed in your WordPress dashboard controls how content is **pushed** from WordPress — which publication it connects to, default style settings, and which post types are eligible.
+  </Card>
+  <Card title="Canvasflow Connector (Process)" icon="gear">
+    Settings inside your Canvasflow account control how content is **processed** once it arrives — how WordPress markup is converted into Canvasflow components and what elements are included or excluded.
+  </Card>
+</CardGroup>
+
+---
+
+## Installing the Plugin
+
+<Steps>
+  <Step title="Install from the WordPress Plugin Directory">
+    In your WordPress dashboard, go to **Plugins → Add New** and search for **Canvasflow**. Click **Install Now**, then **Activate**.
+
+    Alternatively, [download the plugin from wordpress.org](https://wordpress.org/plugins/canvasflow/) and extract the folder to `/wp-content/plugins/canvasflow`, then activate it from the Plugins page.
+  </Step>
+  <Step title="Confirm activation">
+    After activation, a **Canvasflow** item appears in your WordPress dashboard sidebar. If you experience trouble activating the plugin, refer to the plugin troubleshooting guide.
+  </Step>
+</Steps>
+
+---
+
+## Configuring the Plugin
+
+<Steps>
+  <Step title="Open the Canvasflow settings">
+    In your WordPress dashboard, navigate to **Canvasflow → Settings**.
+  </Step>
+  <Step title="Enter your API key">
+    Paste the API key provided by Canvasflow into the **API Key** field and save. Canvasflow validates the key and syncs your available publications automatically.
+  </Step>
+  <Step title="Select a publication">
+    Choose the Canvasflow publication you want to connect to from the **Publication** drop-down.
+  </Step>
+  <Step title="Choose a default style">
+    Select the Canvasflow style to apply to published articles by default. You can override this setting on a per-article basis when you publish.
+  </Step>
+  <Step title="Configure advanced options">
+    Adjust the following options to suit your workflow:
+
+    | Option | Description |
+    |---|---|
+    | **Include Title** | When enabled, the WordPress post title is included in the content sent to Canvasflow. Disable this if you manage the title separately inside Canvasflow. |
+    | **Auto Publish** | When enabled, articles are automatically published to the downstream distribution platform (e.g. a connected Twixl app) as soon as they arrive in Canvasflow. |
+    | **Custom Post Types** | Add any custom post types registered in your WordPress instance so they become eligible for publishing. |
+    | **Merge Adjacent Paragraphs** | When enabled (default), consecutive paragraphs are combined into a single Canvasflow text component. When disabled, each paragraph becomes its own individual component. |
+  </Step>
+  <Step title="Save your settings">
+    Click **Save** to apply the configuration. Your WordPress instance is now connected to Canvasflow.
+  </Step>
+</Steps>
+
+<Tip>
+  If you publish to an issue-based Canvasflow publication or a Twixl Publisher channel that uses Collections, an additional **Issue** or **Collection** selector will appear in the plugin settings and the publish widget.
+</Tip>
+
+---
+
+## Publishing an Article from WordPress
+
+With the plugin configured, you can publish any post or page to Canvasflow directly from the WordPress editor.
+
+<Steps>
+  <Step title="Open the post or page">
+    In your WordPress dashboard, open the post or page you want to publish to Canvasflow.
+  </Step>
+  <Step title="Locate the Canvasflow Publish Widget">
+    Find the **Canvasflow** widget in the editor sidebar — it appears alongside the Metatags, Featured Image, and Category panels.
+
+    <Note>
+      If the widget is not visible, click **Screen Options** at the top-right of the editor and ensure the Canvasflow panel is checked.
+    </Note>
+  </Step>
+  <Step title="Select a style (optional)">
+    Choose a Canvasflow style from the widget's style selector, or leave it set to the default you configured in the plugin settings.
+  </Step>
+  <Step title="Publish to Canvasflow">
+    Click **Publish to Canvasflow**. The article is sent to your connected publication.
+  </Step>
+  <Step title="Check the publish status">
+    When the publish succeeds, the widget displays a **Success** message and the article status changes to **In Sync**. If an **Error** message appears, verify that your API key and publication settings are correct, then try again.
+  </Step>
+</Steps>
+
+---
+
+## Managing Content in Bulk
+
+For larger publishing operations, the **Posts Manager** and **Upload Manager** give you greater control over multiple articles.
+
+<AccordionGroup>
+  <Accordion title="Posts Manager">
+    The Posts Manager lists all content in your WordPress instance — posts, pages, and any custom post types you have added. Use it to select which items should be made eligible for bulk publishing.
+
+    1. Navigate to **Canvasflow → Posts Manager**.
+    2. Select the articles you want to make eligible for publishing.
+    3. Click **Save** to confirm. The selected articles will now appear in the Upload Manager.
+  </Accordion>
+  <Accordion title="Upload Manager">
+    The Upload Manager shows all articles selected from the Posts Manager, as well as articles previously published via the publish widget. Each article displays a colour-coded upload icon:
+
+    - **Grey** — The article has never been published to Canvasflow.
+    - **Green** — The article is published and in sync with Canvasflow.
+    - **Orange** — The article has been published previously but its content has changed since the last upload. Click the upload icon to push the updated version.
+
+    You can also set or change the **Issue**, **Collection**, or **Style** for each article directly from this view.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="The Canvasflow Publish Widget is not visible in the editor">
+    Click **Screen Options** at the top-right corner of the post editor and check the box next to **Canvasflow** to make the widget visible.
+  </Accordion>
+  <Accordion title="An error appears when publishing">
+    Verify that the API key entered in **Canvasflow → Settings** is correct and matches the key provided to you. Also confirm that the correct publication is selected. If the issue persists, contact [support@canvasflow.io](mailto:support@canvasflow.io).
+  </Accordion>
+  <Accordion title="Published paragraphs appear as separate components">
+    Check that **Merge Adjacent Paragraphs** is enabled in the plugin settings. When this option is disabled, each paragraph is treated as an independent Canvasflow component.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+<Note>
+  This page covers importing content **from WordPress into Canvasflow**. If you want to publish content **from Canvasflow to WordPress**, see the [WordPress publish channel](/publish/wordpress) documentation.
+</Note>

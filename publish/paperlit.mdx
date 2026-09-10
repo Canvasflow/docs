@@ -1,0 +1,91 @@
+---
+title: "How to Publish Canvasflow Issues to Paperlit Platform"
+sidebarTitle: "Paperlit"
+description: "Set up a Paperlit publish channel in Canvasflow, add page navigation links to your articles, and upload packaged HPub issues to the Paperlit dashboard."
+---
+
+Paperlit is a digital publishing platform that lets you distribute rich, interactive publications to readers on mobile devices. Canvasflow integrates with Paperlit using the **HPub** (HTML Publication) file format — a self-contained archive of your entire issue in responsive HTML, ready to drop directly into the Paperlit dashboard.
+
+## Overview
+
+To publish to Paperlit from Canvasflow, you first need to add an HPub connector to your brand (see [Creating and Downloading HPub Files](/publish/hpub)), prepare and order your articles, download the HPub file, and then upload it to your Paperlit dashboard. You can also add internal page links within your articles to enable in-app navigation between pages of the same issue.
+
+## Publishing to Paperlit
+
+<Steps>
+  <Step title="Ensure an HPub connector is configured">
+    Before downloading an HPub file, make sure an HPub publish channel has been added to your brand. If you have not done this yet, follow the steps in [Creating and Downloading HPub Files](/publish/hpub) to add the connector first.
+  </Step>
+  <Step title="Set a cover for the issue">
+    In Canvasflow, select a cover image for the issue. This is the cover image that will be displayed for the publication once it is uploaded to Paperlit.
+  </Step>
+  <Step title="Publish all completed content">
+    Publish all articles you want to include in the issue. Only published content will be packaged into the HPub file — unpublished articles are excluded automatically. Articles should show a **green** publish icon (in sync) or an **orange** publish icon (edited after publish) in Article Manager; both states will be included.
+  </Step>
+  <Step title="Order your articles">
+    Use the **vertical move icons** next to each article in Article Manager to arrange the content in the order you want it to appear in the publication.
+  </Step>
+  <Step title="Download the HPub file">
+    Click **Create HPub** at the top of Article Manager and follow the prompts. The HPub file will begin downloading to your computer.
+  </Step>
+  <Step title="Log into the Paperlit dashboard">
+    Open the [Paperlit dashboard](http://dashboard.paperlit.com/#/login) and log in to your account.
+  </Step>
+  <Step title="Add a new issue">
+    Go to **Content**, then select **Add Issue**. Drag and drop the HPub file you downloaded from Canvasflow into the upload area.
+  </Step>
+  <Step title="Configure the issue details">
+    Enter a **name** and **publish date** for the issue. Under **Device Type**, select `Universal` so the issue is displayed across all devices.
+  </Step>
+  <Step title="Confirm the upload">
+    Click `OK` and wait for the upload to complete. Your issue will then be available in Paperlit.
+  </Step>
+</Steps>
+
+<Note>
+  Articles with either a green (in sync) or orange (edited after publish) status icon will be included in the HPub file. Articles with a grey (unpublished) icon will be excluded.
+</Note>
+
+## Adding Page Links
+
+Page links are internal navigation links that allow readers to jump from one article to another within the same issue. They can be created from both images and text, and are supported for Paperlit brands as well as Maz, Pugpig, and PWA brands.
+
+Adding page links to your articles before downloading the HPub file makes in-app navigation between pages possible for your readers.
+
+### Creating a page link from an image
+
+<Steps>
+  <Step title="Select the image">
+    Inside the **Article Editor**, click the image you want to use as a navigation link.
+  </Step>
+  <Step title="Open the link settings">
+    In the **Image Properties** tab, find the **Link** section and select `Page` from the link type options.
+  </Step>
+  <Step title="Choose the target article">
+    A list of all articles within the current issue will appear. Select the article you want to link to.
+  </Step>
+  <Step title="Save the change">
+    Click `Save` to confirm the page link.
+  </Step>
+</Steps>
+
+### Creating a page link from text
+
+<Steps>
+  <Step title="Highlight the text">
+    In the **Article Editor**, select the text you want to turn into a page link.
+  </Step>
+  <Step title="Click the Page Link button">
+    In the **Text Editor Toolbar**, click the `Page Link` button.
+  </Step>
+  <Step title="Choose the target article">
+    A list of all articles within the current issue will be displayed. Select the article you want to link to and click `OK`.
+  </Step>
+  <Step title="Save the article">
+    Save the article to confirm the change.
+  </Step>
+</Steps>
+
+<Tip>
+  Add page links to navigation elements such as a table-of-contents article or section headers so readers can jump to specific content quickly without swiping through every page.
+</Tip>

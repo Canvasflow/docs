@@ -1,0 +1,157 @@
+---
+title: "Import InDesign Layouts into Canvasflow via Plugin"
+sidebarTitle: "InDesign Plugin"
+description: "Install the Canvasflow InDesign plugin on macOS, configure your API key and publication settings, and publish InDesign documents to Canvasflow."
+---
+
+The Canvasflow InDesign plugin bridges print design and digital publishing by converting your existing InDesign layouts directly into Canvasflow articles. Once installed, the plugin adds a **Canvasflow** menu to InDesign, from which you can configure your connection settings and publish layouts — complete with text, images, and styling — to any publication in your Canvasflow account. Images are automatically optimised during the process, so even a 1.2 GB InDesign file can produce a Canvasflow article smaller than 10 MB.
+
+## Installing the Plugin on macOS
+
+Before you can publish from InDesign, place the plugin script in the correct startup folder and run a one-time Terminal command to create the helper scripts Canvasflow needs.
+
+<Steps>
+  <Step title="Download the plugin file">
+    Obtain the latest `Canvasflow.jsx` file from Canvasflow. This file is provided to you directly by the Canvasflow team.
+  </Step>
+  <Step title="Place the file in the startup scripts folder">
+    Copy `Canvasflow.jsx` into the InDesign startup scripts folder. The default path is:
+
+    ```
+    /Applications/Adobe InDesign CC 2019/Scripts/startup scripts
+    ```
+
+    Adjust the path if your InDesign version is different.
+  </Step>
+  <Step title="Open Terminal">
+    Open **Terminal** on your Mac. You can find it in **Applications → Utilities → Terminal**.
+  </Step>
+  <Step title="Run the setup command">
+    Paste and run the following command to create the helper scripts and set the correct permissions:
+
+    ```bash
+    mkdir -p ~/cf-indesign && \
+    touch ~/cf-indesign/canvasflow_resize.command && \
+    chmod +x ~/cf-indesign/canvasflow_resize.command && \
+    touch ~/cf-indesign/canvasflow_convert.command && \
+    chmod +x ~/cf-indesign/canvasflow_convert.command
+    ```
+  </Step>
+  <Step title="Open InDesign and configure settings">
+    Launch InDesign. A **Canvasflow** menu will appear in the menu bar. Select **Canvasflow → Settings**, enter your configuration (see [Configuring Plugin Settings](#configuring-plugin-settings) below), and click **OK** to save.
+  </Step>
+</Steps>
+
+<Note>
+  If the Canvasflow menu does not appear after restarting InDesign, confirm that `Canvasflow.jsx` is in the correct startup scripts folder and that InDesign has been fully restarted.
+</Note>
+
+---
+
+## Packaging an InDesign File
+
+When sharing your InDesign project with the Canvasflow team — for example, when requesting support with a complex layout — you should package the file first. Packaging bundles the INDD file together with all linked fonts and images, ensuring nothing is missing when the file is opened on another machine.
+
+<Steps>
+  <Step title="Open the InDesign file">
+    Open Adobe InDesign and load the INDD file you want to package.
+  </Step>
+  <Step title="Verify all links are intact">
+    Check the Links panel to confirm no links are broken or missing. Resolve any issues before continuing.
+  </Step>
+  <Step title="Open the Package dialog">
+    From the **File** menu, select **Package**.
+  </Step>
+  <Step title="Start packaging">
+    Click the **Package** button in the summary window, then click **Continue** to acknowledge the font usage notice.
+  </Step>
+  <Step title="Choose a destination">
+    Select the folder where you want to save the packaged output, then click **Package**.
+  </Step>
+  <Step title="Compress and share">
+    Locate the newly created folder, compress it into a ZIP archive, and send it to the Canvasflow team.
+  </Step>
+</Steps>
+
+<Tip>
+  Always verify your links before packaging. Broken links will be included in the package as missing assets, which can cause issues during processing.
+</Tip>
+
+---
+
+## Configuring Plugin Settings
+
+Open the settings panel at any time by selecting **Canvasflow → Settings** from the InDesign menu bar. You can set these options once and reuse them for every publish, or adjust them on a per-document basis.
+
+<AccordionGroup>
+  <Accordion title="Endpoint">
+    Choose whether to publish to your **Production** or **Development** environment. Select **Production** for live content.
+  </Accordion>
+  <Accordion title="API Key">
+    Paste the Canvasflow API Key provided to your account. After entering a new key, click the **Validate** button to authenticate and sync your account details.
+  </Accordion>
+  <Accordion title="Publication">
+    Select the name of the Canvasflow publication you want to publish to from the drop-down list. This list populates after a valid API key has been entered and validated.
+  </Accordion>
+  <Accordion title="Issue">
+    If your publication is issue-based, select the target issue from this drop-down. This field only appears for issue-based publications.
+  </Accordion>
+  <Accordion title="Use Preview Images">
+    Enable this option when links to the original images are broken or unavailable. Canvasflow will fall back to the preview images that InDesign generates internally.
+  </Accordion>
+  <Accordion title="Article Creation">
+    Controls how the InDesign file maps to Canvasflow articles:
+    - **Document** — the entire InDesign file is published as a single Canvasflow article.
+    - **Page** — each page in the InDesign file is published as its own separate article.
+  </Accordion>
+  <Accordion title="Style">
+    Select the Canvasflow style to apply to the article when it is created. Styles control typography, colours, and layout.
+  </Accordion>
+  <Accordion title="Pages">
+    Specify which pages to publish. Leave this field blank to publish all pages. To target specific pages, use a comma-separated list (e.g. `1, 4, 7`) or a range (e.g. `3-6`).
+
+    <Warning>
+      The plugin does not support mixing comma-delimited values and ranges in the same entry (e.g. `3, 6, 8-11` is not valid). Use one format at a time.
+    </Warning>
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Publishing from InDesign
+
+Once your settings are configured, use the **Publish** option in the Canvasflow menu to send your document to Canvasflow.
+
+<Steps>
+  <Step title="Open and save your document">
+    Open the InDesign file you want to publish and make sure it is saved. The plugin cannot process unsaved changes.
+  </Step>
+  <Step title="Select Publish">
+    From the InDesign menu bar, select **Canvasflow → Publish**.
+  </Step>
+  <Step title="Wait for processing">
+    The plugin begins processing the document. Processing time depends on the size and complexity of the InDesign file — larger files with many high-resolution images will take longer.
+  </Step>
+  <Step title="Confirm the upload">
+    When processing is complete, a confirmation prompt appears. Click **OK** to upload the article to your Canvasflow account.
+  </Step>
+  <Step title="Wait for upload to complete">
+    The upload runs in the background. Depending on the file size, this may take a few moments.
+  </Step>
+  <Step title="Check for the success alert">
+    An alert appears in InDesign confirming the article has published successfully.
+  </Step>
+  <Step title="View the article in Canvasflow">
+    Switch to your Canvasflow account to view, edit, or publish the newly imported article.
+  </Step>
+</Steps>
+
+---
+
+## Image Optimisation
+
+Canvasflow automatically optimises every image published from InDesign as part of the import process. In addition to image compression, other content optimisations are applied simultaneously. As a result, an InDesign file over 1.2 GB can routinely output to a Canvasflow article of less than 10 MB — without any manual intervention on your part.
+
+<Tip>
+  You do not need to manually resize or compress images before publishing. Let the plugin handle image optimisation as part of the standard publish workflow.
+</Tip>

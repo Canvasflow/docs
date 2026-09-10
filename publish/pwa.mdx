@@ -1,0 +1,406 @@
+---
+title: "Building and Publishing Your Progressive Web App (PWA)"
+sidebarTitle: "PWA"
+description: "Create a fully branded Progressive Web App with Canvasflow in minutes, configure domain and content settings, and publish articles to your PWA."
+---
+
+A Progressive Web App (PWA) brings native app-like experiences to your readers directly through the browser — no App Store submission required. Canvasflow lets you build, configure, and launch a fully branded PWA in just a few minutes, with complete control over domain hosting, content delivery, theming, and reader experience. Once your PWA is live, you can publish and manage articles from the same Article Manager you already use for every other channel.
+
+## Creating a New PWA
+
+<Steps>
+  <Step title="Open Brand Manager">
+    Navigate to **Brand Manager** and click **Settings** on the brand you want to build a PWA for.
+  </Step>
+  <Step title="Add a new Publish Channel">
+    Under **Publish Channels**, click **Add New Channel**.
+  </Step>
+  <Step title="Select Web App (PWA)">
+    Choose **Web App (PWA)** from the channel type list. A full set of configuration options will appear.
+  </Step>
+  <Step title="Configure the PWA">
+    Fill in the configuration fields (see [Configuration Options](#configuration-options) below), then click **Edit Channel** to start the build.
+  </Step>
+  <Step title="Wait for the build to complete">
+    The build process typically takes four to five minutes. Due to DNS propagation, it may take up to 10 minutes before the app becomes accessible at your chosen subdomain.
+  </Step>
+</Steps>
+
+<Note>
+  Once your PWA is built you can navigate directly to it at the subdomain you configured (for example, `motornews.canvasflow.io`), or return to Article Manager to begin publishing content.
+</Note>
+
+---
+
+## Configuration Options
+
+The configuration area lets you customise every aspect of your PWA — from domain and deployment settings to reader experience features and analytics integrations.
+
+<Accordion title="Channel Name & Language">
+  - **Channel Name** — The internal label for this PWA channel. It is only visible inside the Canvasflow dashboard.
+  - **Language** — The default language of your content.
+</Accordion>
+
+<Accordion title="App Title & Short Title">
+  - **App Title** — The full title displayed when the app is installed to a device's home screen.
+  - **App Short Title** — An abbreviated title used when there is insufficient space to display the full App Title on a particular device.
+</Accordion>
+
+<Accordion title="Domain">
+  Set the subdomain where the app will be hosted. Enter any valid subdomain slug (for example, `motornews` results in `motornews.canvasflow.io`).
+
+  <Warning>
+    The domain **cannot** be changed through the UI after the PWA is built. Contact the support team if you need to change your domain once the app is live. Custom or vanity domains and subdomains can be configured for production — see [Moving a PWA to a Custom Domain](#moving-a-pwa-to-a-custom-domain).
+  </Warning>
+</Accordion>
+
+<Accordion title="Issue Mode">
+  Choose how issues are presented to readers:
+
+  - **Single Issue** — Readers are taken directly to the first page of the latest issue when the app opens. Publishing a new issue replaces the previous one automatically.
+  - **Multi Issue** — The app displays a newsstand layout listing all available issues for readers to browse.
+</Accordion>
+
+<Accordion title="Paid Status">
+  - **Free** — All issues are accessible without payment.
+  - **Paid** — Define a default price and currency for issues. This can be overridden on a per-issue basis. Enable this if you intend to sell one or more issues under your brand.
+</Accordion>
+
+<Accordion title="Additional Languages">
+  Add multi-language support to your app by entering comma-separated [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) language codes (for example, `fr,de,en,es`).
+</Accordion>
+
+<Accordion title="Reader Experience Options">
+  - **Reader Mode** — Gives readers an option to hide article images for a more condensed reading experience.
+  - **Font Size** — Adds a font-size slider so readers can manually control the size of text-based content.
+  - **Text to Speech (TTS)** — When enabled, audio files are automatically generated for each article and a play button appears in the app.
+  - **Zoom** — When enabled, readers can pinch to zoom in and out of the page.
+  - **Image Zoom** — When enabled, readers can tap an image to zoom in and out.
+</Accordion>
+
+<Accordion title="Replica Mode">
+  Give readers the option to switch between the replica (PDF) version and the responsive version of your content.
+
+  - **Is Default: Enabled** — The replica version is shown by default; readers may switch to responsive mode.
+  - **Is Default: Disabled** — The responsive version is shown by default; readers may switch to replica mode.
+
+  <Note>
+    Replica Mode only takes effect when source content was imported using the Canvasflow PDF XFlow import service. Contact the team to learn more about this service.
+  </Note>
+</Accordion>
+
+<Accordion title="S3 Region">
+  Choose the AWS region where your app assets will be hosted. Select the region geographically closest to your audience to minimise latency.
+
+  Available regions include:
+
+  | Region | Locations |
+  |--------|-----------|
+  | **US East** | Ohio, N. Virginia |
+  | **US West** | N. California, Oregon |
+  | **Africa** | Cape Town |
+  | **Asia Pacific** | Hong Kong, Mumbai, Osaka-Local, Seoul, Singapore, Sydney, Tokyo |
+  | **Canada** | Central |
+  | **China** | Beijing, Ningxia |
+  | **Europe** | Frankfurt, Ireland, London, Milan, Paris, Stockholm |
+  | **Middle East** | Bahrain |
+  | **South America** | São Paulo |
+
+  <Note>
+    All PWAs are served through an AWS CloudFront CDN for secure, low-latency global delivery. The S3 region **cannot** be changed through the UI after the app is built.
+  </Note>
+</Accordion>
+
+<Accordion title="Prompt Install Message">
+  When enabled, readers who visit the PWA on a mobile device will be prompted to install the app to their home screen.
+</Accordion>
+
+<Accordion title="Analytics and Marketing Tools">
+  Enable third-party analytics and marketing integrations by entering the appropriate ID or domain for any of the following services:
+
+  - Google Analytics
+  - Google Tag Manager
+  - Caymland M4
+  - Ackee
+  - Hotjar
+  - HubSpot
+  - ShareThis
+</Accordion>
+
+<Accordion title="Auto Download">
+  - **Disabled** — Readers must explicitly click to download the current issue for offline use.
+  - **Enabled** — Content is automatically downloaded and cached for offline reading as soon as the first article is viewed.
+
+  <Warning>
+    Enabling Auto Download may increase bandwidth consumption for your readers.
+  </Warning>
+</Accordion>
+
+<Accordion title="Authentication">
+  - **Disabled** — Readers are not required to log in to access content. This option cannot be selected if content requires payment.
+  - **Enabled** — Readers must authenticate before accessing or purchasing content. The following SSO methods are supported:
+    - Apple
+    - Google
+    - Email
+</Accordion>
+
+<Accordion title="Protect App">
+  When enabled, a password is required before the app can be accessed.
+
+  <Note>
+    This feature is intended only for restricting access during testing or limiting access to a small group of users. The password is stored locally on the device and only needs to be entered once.
+  </Note>
+</Accordion>
+
+---
+
+## Designing the PWA Theme
+
+The PWA theme controls the visual appearance of your app — colours, icons, navigation bars, and more. Configure each element to match your brand identity.
+
+<CardGroup cols={2}>
+  <Card title="Splash Icon" icon="image">
+    Display a branded splash icon while the app loads.
+  </Card>
+  <Card title="App Splash Background" icon="palette">
+    Set the background colour shown during the loading screen.
+  </Card>
+  <Card title="App Icon Background" icon="circle">
+    Choose the background colour behind your app icon.
+  </Card>
+  <Card title="Ribbons" icon="tag">
+    Corner ribbons displayed on issue covers denoting their free or paid status.
+  </Card>
+  <Card title="Issue Title" icon="heading">
+    Style the issue title text displayed in the newsstand.
+  </Card>
+  <Card title="Background" icon="layout">
+    Set the background colour of the PWA's root view where issues are displayed.
+  </Card>
+  <Card title="Progress Bar" icon="chart-bar">
+    Colour for the reader progress bar shown at the top of an open issue.
+  </Card>
+  <Card title="Top Nav Bar" icon="bars">
+    Style the top navigation bar containing last-page, download, and Table of Contents controls.
+  </Card>
+  <Card title="Buttons" icon="hand-pointer">
+    Colour for purchase and subscription buttons.
+  </Card>
+  <Card title="Bottom Bar" icon="window-minimize">
+    Style the bottom navigation bar.
+  </Card>
+</CardGroup>
+
+---
+
+## Publishing Content to a PWA
+
+Publishing content to a PWA is a two-step process: first publish the individual articles, then release the issue to make it publicly visible.
+
+<Note>
+  Articles and issues are **not** publicly visible in the PWA until you release the issue (step 2 below).
+</Note>
+
+### Step 1 — Publish Articles
+
+<Steps>
+  <Step title="Open the issue">
+    Navigate to **Issue Manager** and open the issue you want to publish.
+  </Step>
+  <Step title="Set the channel view">
+    In Article Manager, ensure the channel view is set to **PWA Channel**.
+  </Step>
+  <Step title="Publish articles">
+    Publish articles in either of two ways:
+
+    - **Individually** — Click the **Publish** icon next to each article in the Article Manager.
+    - **Multiple at once** — Select several articles using the checkboxes, then publish them all simultaneously.
+  </Step>
+  <Step title="Republish edited articles">
+    If you edit an already-published article, it becomes _out of sync_ with the live version — indicated by the publish button turning **orange**. Click **Publish** on that article to resync it with the updated content.
+  </Step>
+  <Step title="Bulk update all changes">
+    If multiple articles have been edited, click **Publish Issue** to update all currently-published articles at once. Note that this only updates articles that are already published.
+  </Step>
+</Steps>
+
+---
+
+## Releasing and Deactivating Issues
+
+### Releasing an Issue
+
+Once your articles are published, you need to release the issue to make it publicly available in the PWA.
+
+<Steps>
+  <Step title="Navigate to the issue">
+    Open **Article Manager** for the issue you want to release.
+  </Step>
+  <Step title="Click Release Issue">
+    From the toolbar, click the **Release Issue** button.
+  </Step>
+  <Step title="Confirm the release">
+    Click **Confirm**, then **Release the Issue**. The issue is now visible in the PWA.
+  </Step>
+</Steps>
+
+### Deactivating an Issue
+
+To hide a currently live issue from the PWA:
+
+<Steps>
+  <Step title="Navigate to the issue">
+    Open **Article Manager** for the issue you want to deactivate.
+  </Step>
+  <Step title="Note the current status icon">
+    The toolbar icon reflects the issue's current public status.
+  </Step>
+  <Step title="Deactivate the issue">
+    Click **Deactivate**. This immediately removes the issue from public view in the PWA.
+  </Step>
+  <Step title="Confirm">
+    Click **Confirm**. The toolbar icon switches to **Activate**, indicating the issue is now hidden.
+  </Step>
+</Steps>
+
+---
+
+## Managing the Table of Contents
+
+Canvasflow automatically generates and populates a Table of Contents (ToC) for all published articles. You can exclude individual articles from the ToC when needed.
+
+<Steps>
+  <Step title="Open Article Manager">
+    Navigate to **Article Manager** and ensure the **Channel View** is set to **PWA**.
+  </Step>
+  <Step title="Edit article settings">
+    Click the **Settings** button next to the article you want to manage, then select **Edit**.
+  </Step>
+  <Step title="Change the ToC status">
+    Set the **ToC Status** to **Excluded** to prevent the article from appearing in the Table of Contents. To reinstate a previously excluded article, set the status back to **Include**.
+  </Step>
+  <Step title="Save and republish">
+    Click **Update** to confirm the change, then republish the issue.
+  </Step>
+</Steps>
+
+---
+
+## Adding Page Links
+
+You can create direct links to other pages within the same issue from both text and images.
+
+### Link from an Image
+
+<Steps>
+  <Step title="Select the image">
+    In the **Article Editor**, select the image you want to link from.
+  </Step>
+  <Step title="Set the link type">
+    In the **Image Properties Tab**, under **Link**, select **Page**.
+  </Step>
+  <Step title="Choose a target article">
+    A list of all articles in the current issue will appear. Select the article you want to link to.
+  </Step>
+  <Step title="Save">
+    Click **Save** to confirm the change.
+  </Step>
+</Steps>
+
+### Link from Text
+
+<Steps>
+  <Step title="Highlight the text">
+    In the Article Editor, highlight the text you want to turn into a page link.
+  </Step>
+  <Step title="Click Page Link">
+    In the **Text Editor Toolbar**, click the **Page Link** button.
+  </Step>
+  <Step title="Choose a target article">
+    Select the article you want to link to from the list and click **OK**.
+  </Step>
+  <Step title="Save the article">
+    Save the article to confirm the change.
+  </Step>
+</Steps>
+
+---
+
+## Moving a PWA to a Custom Domain
+
+When your app is ready for production, you can host it in any of the following ways:
+
+<CardGroup cols={2}>
+  <Card title="Canvasflow Subdomain" icon="globe">
+    Default hosting at a subdomain of Canvasflow (e.g. `https://myapp.canvasflow.io`).
+  </Card>
+  <Card title="Custom TLD" icon="link">
+    Host at your own top-level domain (e.g. `https://myapp.com`).
+  </Card>
+  <Card title="Custom Subdomain" icon="sitemap">
+    Host at a subdomain of your own domain (e.g. `https://magazine.myapp.com`).
+  </Card>
+  <Card title="iFrame Embed" icon="code">
+    Embed the PWA in an iframe on an existing website. Note that some functionality may be limited with this approach.
+  </Card>
+</CardGroup>
+
+<Note>
+  Contact the Canvasflow support team when you are ready to move your app to a custom domain. Allow up to 24 hours for the process to complete, although it typically takes just a few hours under normal circumstances.
+</Note>
+
+---
+
+## Updating a PWA
+
+You can update your PWA's configuration at any time. Changes take effect for all readers as soon as the updated build completes.
+
+<Steps>
+  <Step title="Open Brand Settings">
+    Navigate to **Brand Settings** and select **Publish Channels**.
+  </Step>
+  <Step title="Edit the PWA channel">
+    Click **Edit** next to the PWA channel you want to update.
+  </Step>
+  <Step title="Amend configuration">
+    Update any fields as required.
+  </Step>
+  <Step title="Save changes">
+    Click **Edit Channel** to apply the update. The rebuild process takes two to three minutes to complete.
+  </Step>
+</Steps>
+
+<Warning>
+  The following properties **cannot** be changed through the UI after the PWA is built:
+  - **Domain**
+  - **AWS S3 Region**
+
+  Contact the support team if you need to change either of these properties.
+</Warning>
+
+---
+
+## Deleting a PWA
+
+<Warning>
+  Deleting a PWA is a **permanent action** and cannot be reversed. If you only need to pause the app temporarily, contact [support@canvasflow.io](mailto:support@canvasflow.io) instead.
+</Warning>
+
+<Steps>
+  <Step title="Open Brand Manager">
+    From **Brand Manager**, go to **Settings** for the relevant brand.
+  </Step>
+  <Step title="Open the channel edit menu">
+    Under **Publish Channels**, click the **Edit** dropdown next to the PWA.
+  </Step>
+  <Step title="Delete the PWA">
+    Click **Delete** and confirm the prompt.
+  </Step>
+  <Step title="Wait for the deletion to complete">
+    The deletion process can take up to 5 minutes. During this time the app will still be publicly accessible. Once complete, the PWA, its DNS entries, and all associated assets will be permanently removed.
+  </Step>
+</Steps>
+
+<Note>
+  Deleting a PWA does **not** delete or affect any content within your Canvasflow account.
+</Note>

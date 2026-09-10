@@ -1,0 +1,133 @@
+---
+title: "Styles and Templates: Design Your Brand in Canvasflow"
+sidebarTitle: "Styles & Templates"
+description: "Understand how Canvasflow styles control the visual design of your articles, and how templates accelerate content creation with reusable layouts."
+---
+
+Styles and templates are two of the most powerful tools in Canvasflow for maintaining consistency and speeding up content production. Although they work closely together, they serve distinct purposes: a **style** defines how your content looks, while a **template** defines how your content is structured. Understanding the difference helps you design a workflow that keeps your brand on point and your editorial team moving fast.
+
+## Styles
+
+A style is a design layer that you attach to an article. It controls every visual aspect of that article — background colour, text colour, font family, font sizes, padding, and more. Because a style is independent of the article's content, you can update the design of all articles that share a style by editing the style once, and you can swap one style for another on any article at any time.
+
+Canvasflow lets you create an unlimited number of styles. Each style can be scoped to a single publication or made available globally across all publications.
+
+### Style Properties
+
+When you edit a style in the **Style Builder**, you work with two layers of settings:
+
+- **Canvas Properties** — Set the background colour and overall padding for the article canvas.
+- **Component Properties** — Click any individual component (Headline, Paragraph, Subtitle, etc.) to access its properties panel. Changes to one component type do not affect others, so your Headline and Paragraph styles remain independent.
+
+### Create a New Style
+
+<Steps>
+  <Step title="Open the Style Manager">
+    From inside your publication, navigate to the **Style Manager** using the toolbar in the Article Manager or Article Builder.
+  </Step>
+  <Step title="Add a new style">
+    Click **Create Style** at the top right of the Style Manager.
+  </Step>
+  <Step title="Name your style">
+    Enter a **Name** and an optional **Description** for the style.
+  </Step>
+  <Step title="Choose the scope">
+    Select either **Publication** (available only within this publication) or **Global** (available across all publications in your account).
+  </Step>
+  <Step title="Choose the style type">
+    Select **Article** as the type for a standard article style. Advanced options include **Inline** and **Device** styles.
+  </Step>
+  <Step title="Set the source">
+    Choose **New** to start from scratch, **Copy From** to base the style on an existing one, or **Inherit From** to create a style that inherits from a parent style.
+  </Step>
+  <Step title="Create the style">
+    Click **Create**. Your new style will appear in the Style Manager and will be available to assign to articles.
+  </Step>
+</Steps>
+
+### Edit a Style
+
+<Steps>
+  <Step title="Open the style in the Article Builder">
+    From within an article, select the **Style** menu in the toolbar, choose the currently applied style, and click **Edit**.
+  </Step>
+  <Step title="Edit canvas properties">
+    Click the **paintbrush icon** to open **Canvas Properties** and adjust the background colour and canvas padding.
+  </Step>
+  <Step title="Edit component properties">
+    Click any component on the style canvas to open its properties panel. Adjust typography, colours, spacing, and other options as needed.
+  </Step>
+  <Step title="Save your changes">
+    Click **Save**, then click **Back to article** to return to the Article Builder. Your article will immediately reflect the updated style.
+  </Step>
+</Steps>
+
+### Apply a Style to an Article
+
+To apply a different style to an article, open the article in the **Article Builder**, select the **Style** menu in the toolbar, and choose the style you want. You can switch styles as many times as you like — Canvasflow updates the article's appearance instantly so you can compare options side by side.
+
+---
+
+## Templates
+
+A template saves a complete content layout — the arrangement of columns, text components, image placeholders, and rich media blocks — so that every new article based on it starts with the same structure. This is especially valuable for recurring content types such as news stories, feature articles, or product reviews that always follow the same format.
+
+The **Template Builder** works exactly like the Article Builder: you drag and drop components onto a canvas and arrange them into the layout you want. When a template is selected at article creation time, the canvas is pre-populated with that structure, ready for content to be filled in.
+
+<Note>
+  Styles are **separate** from templates. A template only captures the component structure and initial content of an article. The visual design — fonts, colours, padding — is always controlled by the style you assign independently.
+</Note>
+
+### Create a New Template
+
+<Steps>
+  <Step title="Open the Template Manager">
+    From inside your publication, click the **Templates** menu in the toolbar to open the **Template Manager**.
+  </Step>
+  <Step title="Add a new template">
+    Click **Add Template** at the top right.
+  </Step>
+  <Step title="Name your template">
+    Enter a **Name** and an optional **Description**.
+  </Step>
+  <Step title="Confirm the type">
+    Make sure **Template** is selected under **Type**.
+  </Step>
+  <Step title="Assign a style">
+    Select the style you want to associate with this template. You can change the associated style at any time from the Template Manager or Template Builder.
+  </Step>
+  <Step title="Create the template">
+    Click **Create**. The template will appear in the Template Manager.
+  </Step>
+  <Step title="Build the layout">
+    Click **Edit** next to the new template to open the **Template Builder**. Drag and drop components onto the canvas to define the layout, then click **Save** in the toolbar when you are done.
+  </Step>
+</Steps>
+
+Once saved, your template will appear as an option in the **Template** field whenever a new article is created.
+
+### Create a Template from an Existing Article
+
+<Tip>
+  If you have already built an article with a layout you want to reuse, you can turn it into a template without rebuilding it from scratch. In the Article Manager, click the **Edit** icon next to the article and select **Create Template**. Canvasflow will generate a new template based on that article's component structure.
+</Tip>
+
+---
+
+## How Styles and Templates Work Together
+
+The relationship between styles and templates gives you maximum flexibility:
+
+- The **template** determines *what* components appear in an article and *where* they are placed.
+- The **style** determines *how* those components look.
+
+This separation means you can redesign your brand's typography and colour scheme by updating a single style, and every article that uses that style — regardless of which template it was built from — will reflect the change immediately. Equally, you can introduce a new article layout template without touching any existing design work.
+
+<CardGroup cols={2}>
+  <Card title="Create Your First Article" icon="pen-to-square" href="/getting-started/creating-an-article">
+    Put your style and template to work by building your first article.
+  </Card>
+  <Card title="Publish Channels" icon="satellite-dish" href="/getting-started/publishing-channels">
+    Connect a publish channel and distribute your styled content to readers.
+  </Card>
+</CardGroup>

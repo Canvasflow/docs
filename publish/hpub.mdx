@@ -1,0 +1,66 @@
+---
+title: "Create and Download HPub Publication Files in Canvasflow"
+sidebarTitle: "HPub"
+description: "Add an HPub connector in Canvasflow to package a complete issue into HPub format and download it for use in compatible reading applications."
+---
+
+HPub, short for HTML Publication, is an open file format that packages an entire issue as a collection of responsive HTML documents, images, and metadata into a single archive. Canvasflow supports HPub as a publish channel, enabling you to compile a complete issue and download it as a `.hpub` file for use with compatible reading applications such as Paperlit.
+
+## Overview of HPub Format
+
+An HPub file is a self-contained archive — similar in structure to a ZIP file — that bundles all the HTML content and media assets for every article in an issue. Reading applications that support the HPub format can open this single file to deliver the full, richly formatted publication to readers on their devices.
+
+The HPub format is ideal when you need to:
+
+- Publish a complete issue to a platform like **Paperlit** that accepts HPub uploads.
+- Distribute a packaged, offline-readable version of your publication.
+- Inspect and verify the rendered HTML output of your issue before distribution.
+
+<Note>
+  You can inspect the contents of any `.hpub` file by renaming the file extension from `.hpub` to `.zip` and extracting it with any standard archive tool. This lets you review the HTML and image assets directly.
+</Note>
+
+## Adding an HPub Connector
+
+Before you can download an HPub file, you need to add an HPub publish channel to your brand.
+
+<Steps>
+  <Step title="Open Brand Settings">
+    From **Brand Manager**, locate the publication you want to add the connector to and click the `Settings` button.
+  </Step>
+  <Step title="Go to Publish Channels">
+    Navigate to the **Publish Channel** section and click the `+` button to add a new channel.
+  </Step>
+  <Step title="Select HPub">
+    From the channel type list, select `HPub`.
+  </Step>
+  <Step title="Name the channel">
+    Enter a name for the channel that makes it easy to identify, then click `Add Channel`.
+  </Step>
+  <Step title="Go to Article Manager">
+    Navigate to **Article Manager** for the brand. The HPub channel is now active and you can proceed to download your first HPub file.
+  </Step>
+</Steps>
+
+## Downloading an HPub File
+
+Once the HPub connector is in place, follow these steps to generate and download an HPub file for your issue.
+
+<Steps>
+  <Step title="Open Article Manager">
+    Navigate to the **Article Manager** view for the issue you want to package as an HPub file.
+  </Step>
+  <Step title="Ensure articles are published">
+    Only published articles are included in the HPub output. Check that all the articles you want in the file have a published status (shown by a green or orange publish icon). Publish any remaining articles before proceeding.
+  </Step>
+  <Step title="Click the HPub icon">
+    In the **Article Manager toolbar**, click the `HPub` icon. A confirmation prompt will appear asking if you want to build the HPub file.
+  </Step>
+  <Step title="Confirm the download">
+    Click `Confirm`. Canvasflow will compile the issue and the `.hpub` file will begin downloading to your computer.
+  </Step>
+</Steps>
+
+<Tip>
+  If you are publishing to **Paperlit**, refer to the [Publishing to Paperlit](/publish/paperlit) guide for instructions on how to upload the HPub file to the Paperlit dashboard once it has downloaded.
+</Tip>

@@ -1,0 +1,179 @@
+---
+title: "Canvasflow Publication Settings and Customisation Options"
+sidebarTitle: "Settings"
+description: "Configure publication details, customise colours, manage publish channels, and set up text-to-speech and custom text components in Canvasflow."
+---
+
+Every publication in Canvasflow has a dedicated settings area where you can control how the publication is identified, how your content is presented, and where it is delivered. Access publication settings at any time by hovering over the publication in the **Brand Manager** and clicking the **Settings** (cog) icon.
+
+## Publication Details
+
+The **Details** tab is the primary place to view and edit the core information associated with a publication.
+
+### Fields Overview
+
+| Field | Description | Editable |
+|---|---|---|
+| **Name** | The display name of your publication within Canvasflow. | Yes |
+| **Description** | An optional description to help identify the publication. | Yes |
+| **Type** | Whether the publication is Article Based or Issue Based. | No — set at creation |
+| **Thumbnail** | An optional image used to identify the publication in the Brand Manager. Not used externally. | Yes |
+| **Text Direction** | The default text direction (e.g. left-to-right or right-to-left) for all articles in the publication. | Yes |
+| **Created On** | The date the publication was created. | No |
+| **Created By** | The name of the user who created the publication. | No |
+| **Connected Channels** | The publishing channels currently connected to this publication. | Managed via Publish Channels tab |
+
+### Editing Publication Details
+
+<Steps>
+  <Step title="Open publication settings">
+    From the **Brand Manager**, hover over the publication and click the **Settings** icon.
+  </Step>
+  <Step title="Go to the Details tab">
+    Select the **Details** tab within the settings panel.
+  </Step>
+  <Step title="Enable editing">
+    Click the **More Options** menu (or edit button on the right) and select **Edit**. The fields that can be changed will become editable.
+  </Step>
+  <Step title="Apply your changes">
+    Make the required updates and click **Save**. The publication details will be updated immediately.
+  </Step>
+</Steps>
+
+<Note>
+  The publication **type** (Article Based or Issue Based) cannot be changed after creation. All other detail fields, including the name, description, thumbnail, and text direction, can be updated at any time.
+</Note>
+
+## Customising Publication Colours
+
+Canvasflow lets you define a custom colour palette for each publication. These colours appear in the text formatting menu inside the Article Editor, allowing editors to apply brand-approved colours consistently when formatting inline text.
+
+<Steps>
+  <Step title="Navigate to the publication settings">
+    From the **Brand Manager**, hover over the publication and click the **Settings** icon.
+  </Step>
+  <Step title="Open the Colours tab">
+    Select the **Colours** tab from the settings menu.
+  </Step>
+  <Step title="Select a colour swatch">
+    Click one of the available colour swatches to select it for editing.
+  </Step>
+  <Step title="Enter your HEX value">
+    In the **HEX Colour** field beneath the swatches, type the HEX value of the colour you want to assign (for example, `#EC5B6C`).
+  </Step>
+  <Step title="Save the colour">
+    Click **Update**. The colour will be saved and will appear in the text formatting menu of the Article Editor for this publication.
+  </Step>
+</Steps>
+
+<Tip>
+  Design tools such as Adobe Photoshop and InDesign display HEX values when you select a colour. You can also use an online tool like [HTMLColorCodes Colour Picker](https://htmlcolorcodes.com/color-picker/) to find the HEX value for any colour.
+</Tip>
+
+## Managing Publish Channels
+
+Publish channels define the destinations where Canvasflow sends your published content. Channels are managed on a per-publication basis from the **Publish Channels** tab in publication settings.
+
+### Adding a Publish Channel
+
+<Steps>
+  <Step title="Open the Publish Channels tab">
+    Navigate to the publication settings and select the **Publish Channels** tab.
+  </Step>
+  <Step title="Add a new channel">
+    Click **Add Channel**.
+  </Step>
+  <Step title="Select the channel type">
+    From the **Channel type** menu, select the channel you want to add (for example, PWA, WordPress, or Apple News).
+  </Step>
+  <Step title="Enter credentials and save">
+    Enter your channel credentials and click **Add Channel**. The channel will be connected to the publication.
+  </Step>
+</Steps>
+
+### Editing a Publish Channel
+
+<Steps>
+  <Step title="Locate the channel">
+    From the **Publish Channels** tab, find the channel you want to update.
+  </Step>
+  <Step title="Open the edit view">
+    Click the **More Options** menu on the channel and select **Edit**.
+  </Step>
+  <Step title="Update and save">
+    Make the required changes to the channel information and click **Edit Channel**. Changes are applied immediately.
+  </Step>
+</Steps>
+
+### Deleting a Publish Channel
+
+<Steps>
+  <Step title="Locate the channel">
+    From the **Publish Channels** tab, find the channel you want to remove.
+  </Step>
+  <Step title="Select Delete">
+    Click the **More Options** menu and select **Delete**.
+  </Step>
+  <Step title="Confirm deletion">
+    Click **Yes, Delete it**. The channel will be removed from the publication and will no longer be available as a publishing destination.
+  </Step>
+</Steps>
+
+<Warning>
+  You cannot delete a channel that is currently in use. To remove an active channel, first switch the Article Manager to the **Default** channel view, which disconnects the channel from the active view. You can then delete it from the Publish Channels tab.
+</Warning>
+
+## Custom Text Components
+
+Text components — such as Headline, Body, and Pull Quote — can be renamed per publication, and new custom components can be enabled to support different editorial use cases. For example, you might create multiple styled headline variants for different content types.
+
+<Steps>
+  <Step title="Open publication settings">
+    From the **Brand Manager**, hover over the publication and click the **Settings** icon (cog).
+  </Step>
+  <Step title="Select Text Names">
+    Navigate to the **Text Names** tab within the settings area.
+  </Step>
+  <Step title="Rename or toggle components">
+    All text components are listed here. You can:
+    - **Rename** any component by clicking its name and typing a new label.
+    - **Enable** a custom text component by checking its checkbox.
+    - **Disable** an existing component by unchecking its checkbox.
+  </Step>
+  <Step title="Apply in the Article Editor">
+    Any newly enabled custom text component will become available in the Article Editor immediately and can be styled through the editor just like built-in components.
+  </Step>
+</Steps>
+
+<Info>
+  Custom text components are publication-specific. Changes you make to text component names or availability in one publication do not affect any other publication.
+</Info>
+
+## Text-to-Speech
+
+Canvasflow can automatically generate audio files for each article, enabling readers to listen to content as well as read it. This is useful for accessibility and for delivering audio editions through your PWA channel.
+
+<Steps>
+  <Step title="Navigate to Publish Channels settings">
+    From the **Brand Manager**, open the publication settings and select the **Publish Channels** tab.
+  </Step>
+  <Step title="Edit the PWA channel">
+    Locate your PWA channel and click **Edit**.
+  </Step>
+  <Step title="Enable TTS in the PWA configuration">
+    In the **PWA Channel Configuration** page, ensure that **TTS** (Text-to-Speech) is toggled on.
+  </Step>
+  <Step title="Publish your content">
+    Once TTS is enabled, publish the issues or articles you want audio generated for. Canvasflow will automatically produce the audio files.
+  </Step>
+</Steps>
+
+<Note>
+  Text-to-Speech is an **additional paid service**. Contact the Canvasflow team to enable it for your account.
+</Note>
+
+<Accordion title="Multi-language and Text-to-Speech">
+  If multi-language is enabled for your publication, Canvasflow generates TTS audio files for **all enabled languages** automatically. The service uses AI to translate content and produce accurate audio in each language.
+
+  Note that the option to play TTS audio is not shown when the PWA is in **Replica Mode** — it is only available when content is viewed in **Responsive Mode**.
+</Accordion>

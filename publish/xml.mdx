@@ -1,0 +1,68 @@
+---
+title: "Publish and Export Canvasflow Content as Prism XML"
+sidebarTitle: "XML"
+description: "Add a Prism XML channel to Canvasflow, publish your articles, and export them in XML format for use with third-party platforms and newsstand services."
+---
+
+Canvasflow supports exporting your publication content as Prism XML, a structured format widely used for content interchange between publishing systems. Once you have added an XML channel to your publication, you can publish your articles and download a ZIP archive containing each article as an individual XML file alongside all associated images.
+
+## Overview of XML Output
+
+The XML export uses the **Prism XML** format, packaging each published article into a structured XML document. The resulting download is a single ZIP file containing:
+
+- One XML file per article, with all text content and metadata structured according to the Prism schema.
+- All images referenced within the articles, allowing the receiving system to rebuild the complete issue.
+
+This output is suitable for feeding content into third-party platforms, content management systems, or digital newsstand services that accept Prism XML uploads.
+
+## Adding an XML Channel
+
+Before you can export XML, you need to add a Prism XML publish channel to your publication.
+
+<Steps>
+  <Step title="Open Publication Manager">
+    Navigate to the **Publication Manager** within your Canvasflow account.
+  </Step>
+  <Step title="Open Publication Settings">
+    Hover over the publication you want to configure and click the **cog icon** to open **Publication Settings**.
+  </Step>
+  <Step title="Go to Publish Channels">
+    Select the **Publish Channels** tab.
+  </Step>
+  <Step title="Add a new channel">
+    Click the **Add New** icon to begin adding a channel.
+  </Step>
+  <Step title="Configure the channel">
+    Enter a **Channel Name** for the XML channel, then select **Prism XML** from the **Channel Selector** dropdown.
+  </Step>
+  <Step title="Save the channel">
+    Click **Add Channel**. The XML channel is now attached to your publication and ready to use.
+  </Step>
+</Steps>
+
+<Note>
+  You can add multiple publish channels to a single publication. If you need to distribute content to several platforms, repeat the steps above for each channel type.
+</Note>
+
+## Outputting Articles as XML
+
+Once your XML channel is in place, follow these steps to publish your articles and generate the XML download.
+
+<Steps>
+  <Step title="Go to Article Manager">
+    Navigate to the **Article Manager** view for the issue you want to export.
+  </Step>
+  <Step title="Select and publish articles">
+    Tick the checkboxes next to all the articles you want to include in the XML output, then click **Publish Selected** in the toolbar. Only published articles will be included in the export.
+  </Step>
+  <Step title="Create the XML output">
+    Once the articles are published, click **Create Prism XML** in the menu bar.
+  </Step>
+  <Step title="Download the ZIP file">
+    When the process completes, a ZIP file will download automatically. This archive contains each selected article in XML format, together with all images associated with the issue.
+  </Step>
+</Steps>
+
+<Tip>
+  Make sure all articles are in a finished state before publishing them, as only the content present at the time of publishing will appear in the XML output. If you update an article after publishing, re-publish it before generating the XML to ensure the latest version is included.
+</Tip>

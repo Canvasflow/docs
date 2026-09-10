@@ -1,0 +1,149 @@
+---
+title: "Adding and Using Custom Fonts in Your Canvasflow Publication"
+sidebarTitle: "Custom Fonts"
+description: "Add custom web fonts to your Canvasflow publication and apply them in the Style Builder to ensure your brand typography looks exactly as intended."
+---
+
+Canvasflow supports custom web fonts, allowing you to go beyond standard system fonts like Arial or Times New Roman and use the precise typefaces that define your brand. Custom fonts are loaded from Canvasflow's servers, so they display correctly for every reader — even offline — without requiring any font to be installed on the reader's device. Fonts are managed on a per-publication basis, giving each publication its own independent font library.
+
+## How Custom Fonts Work
+
+Standard "web-safe" system fonts are available everywhere because every operating system ships with them installed. Custom fonts work differently: rather than relying on the reader's device, Canvasflow hosts the font files and serves them alongside your content whenever an article is loaded. This means your typography looks exactly as designed, on every device and in every reading environment you publish to.
+
+<Note>
+  Canvasflow does not support linking to external font libraries such as Google Fonts. All custom fonts must be hosted within your Canvasflow publication to ensure they are available to readers in offline environments (for example, in app-based publications).
+</Note>
+
+## Adding Custom Fonts to a Publication
+
+Custom fonts are added to your account by the Canvasflow support team. To have fonts added to your publication:
+
+<Steps>
+  <Step title="Prepare your font files">
+    Gather the web-friendly font files you want to use. If you only have a TrueType (`.ttf`) version of your font, include it in your request — the support team will convert it to a web-compatible format on your behalf.
+  </Step>
+  <Step title="Email the support team">
+    Send your font files to [support@canvasflow.io](mailto:support@canvasflow.io), along with the name of the publication you want the fonts added to. Include all variants you need — Regular, Bold, Italic, and BoldItalic — so you can avoid faux browser styles later.
+  </Step>
+  <Step title="Await confirmation">
+    The support team will convert and install your fonts. Once confirmed, the fonts will appear in your publication's Font settings and in the Style Builder.
+  </Step>
+</Steps>
+
+<Note>
+  There is no limit to the number of custom fonts a publication can have installed. However, each active font is loaded with every article that uses the associated style. Enable only the fonts you actively need to keep your publication performing well.
+</Note>
+
+## Enabling Custom Fonts in Publication Settings
+
+After fonts have been installed, you choose which ones are active for your publication. Only enabled fonts appear in the Style Builder's font selection menus.
+
+<Steps>
+  <Step title="Open Brand Manager">
+    From the **Brand Manager**, hover over the publication you want to configure and click **Settings**.
+  </Step>
+  <Step title="Navigate to the Fonts tab">
+    From the publication settings menu, select the **Fonts** tab. A list of all installed fonts for the publication is displayed.
+  </Step>
+  <Step title="Enable the fonts you need">
+    Check the box next to each font you want to make available in the Style Builder. Deselect any fonts that are installed but not currently in use.
+  </Step>
+  <Step title="Save">
+    Click **Save** to apply the selection. The enabled fonts are now available to use within any style in this publication.
+  </Step>
+</Steps>
+
+<Warning>
+  Enabling fonts that are not actively used in any style adds unnecessary weight to your articles. Review your font list periodically and disable fonts that are no longer referenced in any active style.
+</Warning>
+
+## Applying Custom Fonts in the Style Builder
+
+Once a custom font is enabled in Publication Settings, you can assign it to any text component in a style.
+
+<Steps>
+  <Step title="Open Style Manager">
+    Navigate to the Style Manager from the publication toolbar.
+  </Step>
+  <Step title="Edit a style">
+    Select **Edit** on the style you want to update. The Style Builder opens.
+  </Step>
+  <Step title="Select a text component">
+    Click any text component on the canvas (for example, the Paragraph or Headline component) to open its properties.
+  </Step>
+  <Step title="Open the Font menu">
+    In the properties panel, locate the **Font** (or **Font Family**) menu. Custom fonts appear at the bottom of the font list, below the standard web-safe fonts.
+  </Step>
+  <Step title="Select your custom font">
+    Click your custom font to apply it to the selected text component.
+  </Step>
+  <Step title="Set font variants">
+    While in the Font Family section, also set the **Bold**, **Italic**, and **BoldItalic** variant fields. See [Font Style Variants](#font-style-variants) below.
+  </Step>
+  <Step title="Save">
+    Click **Save** to apply the changes. All articles using this style will now load and display the custom font.
+  </Step>
+</Steps>
+
+## Font Style Variants
+
+Font Style Variants tell Canvasflow which font file to use when a reader's content is formatted as bold, italic, or bold-italic. Without explicitly mapping these variants, the browser will attempt to simulate bold and italic from the regular font file — a technique known as a **faux browser style**. Faux styles often look noticeably heavier, slanted, or distorted compared to the genuine typeface variants, which can undermine the quality of your brand typography.
+
+### Setting Font Variants
+
+<Steps>
+  <Step title="Select a text component in the Style Builder">
+    Click the text component whose font variants you want to configure.
+  </Step>
+  <Step title="Expand Font Family">
+    In the properties panel, find the **Font Family** section.
+  </Step>
+  <Step title="Assign each variant">
+    Set:
+    - **Normal** — the standard weight (e.g. *Roboto-Regular*).
+    - **Bold** — the official bold weight (e.g. *Roboto-Bold*).
+    - **Italic** — the official italic cut (e.g. *Roboto-Italic*).
+    - **BoldItalic** — the official bold-italic cut (e.g. *Roboto-BoldItalic*).
+  </Step>
+  <Step title="Save">
+    Click **Save**. Canvasflow will now load the correct font file whenever that style variant is applied to content, instead of relying on browser synthesis.
+  </Step>
+</Steps>
+
+<Tip>
+  When requesting fonts from the support team, ask for all four variants — Regular, Bold, Italic, and BoldItalic — at the same time. Having all variants available from the start means you can set them correctly in every style without needing a follow-up support request.
+</Tip>
+
+### Finding Font Variant Names
+
+To identify the exact names of font variants installed in your publication (needed when writing CSS rules):
+
+<Steps>
+  <Step title="Open Publication Settings">
+    Navigate to Publication Settings for your publication.
+  </Step>
+  <Step title="Select the Fonts tab">
+    Click the **Fonts** tab to see all installed fonts.
+  </Step>
+  <Step title="Note the variant names">
+    Note the full name of each variant as listed — for example, *Aleo-Bold*, *Aleo-Italic*, *Aleo-BoldItalic*. Use these exact names when assigning variants in the Style Builder or writing custom CSS rules.
+  </Step>
+</Steps>
+
+## Frequently Asked Questions
+
+<Accordion title="Can I use any web font in Canvasflow?">
+  Yes. Canvasflow provides full support for any custom web-friendly font, with no limit on the number of fonts a publication can have installed. If you have a font in TrueType (`.ttf`) format, the support team can convert it to a web-compatible format for you. Send your font files to [support@canvasflow.io](mailto:support@canvasflow.io) along with the name of your publication.
+</Accordion>
+
+<Accordion title="Can I use Google Fonts?">
+  No. Canvasflow does not support direct linking to the Google Fonts library or any other external font CDN. All fonts must be hosted within your Canvasflow publication to guarantee they load correctly for readers in offline environments — such as downloaded app issues — where external servers would not be reachable.
+</Accordion>
+
+<Accordion title="Will enabling a custom font slow down my articles?">
+  Each active font is included in every article that uses a style referencing it. To maintain good performance, enable only the fonts you are actively using in your styles. Periodically review the Fonts tab in Publication Settings and deactivate any fonts that are installed but not referenced in any active style.
+</Accordion>
+
+<Accordion title="My custom font looks different when bold or italic — why?">
+  This is almost certainly a faux browser style issue. The browser is synthesising the bold or italic appearance from the regular font file because no explicit variant has been mapped. To fix it, open the style in the Style Builder, select the affected text component, and set the **Bold**, **Italic**, and **BoldItalic** fields in the Font Family section to the corresponding installed font variant names. See [Font Style Variants](#font-style-variants) above.
+</Accordion>

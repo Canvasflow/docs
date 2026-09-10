@@ -1,0 +1,345 @@
+---
+title: "Article Components Reference for the Canvasflow Builder"
+sidebarTitle: "Components"
+description: "Explore every component available in the Canvasflow Article Builder: text, image, gallery, media, layout, embed, and snippet components."
+---
+
+Every piece of content in a Canvasflow article is built from components — self-contained blocks you drag from the Component Panel onto the canvas. Components range from simple formatted text to interactive embeds, full-page adverts, and reusable snippets. This reference covers every component type available in the Article Builder, along with the options and customisation settings for each.
+
+## Component Categories
+
+The Component Panel groups components into the following categories:
+
+<CardGroup cols={2}>
+  <Card title="Text" icon="text">
+    Headline, Subtitle, Paragraph, Intro, Blockquote, Pull Quote, and more pre-formatted text blocks.
+  </Card>
+  <Card title="Media" icon="image">
+    Image, Gallery, Video, Audio, Map, Table, Anchor, and Full Page Advert components.
+  </Card>
+  <Card title="Layout" icon="table-columns">
+    Column components for organising content side-by-side in 1–4 column or multi-column layouts.
+  </Card>
+  <Card title="Embeds" icon="code">
+    Infogram, Twitter/X, Custom Code, and Button components.
+  </Card>
+  <Card title="Snippets" icon="bookmark">
+    Reusable content blocks built from templates that you can drop into any article.
+  </Card>
+</CardGroup>
+
+---
+
+## Text Components
+
+The Text Components section contains a set of pre-formatted text blocks. Each one is styled by the style applied to the article, meaning the font, size, spacing, and colour are all controlled centrally. Once a text component is on the canvas, you can type or paste content directly into it.
+
+<Accordion title="Available text component types">
+  The following text block types are available in the Component Panel:
+
+  - **Headline** — The primary article title or major section heading.
+  - **Subtitle** — A secondary heading, typically displayed beneath the headline.
+  - **Intro** — An introductory paragraph, often styled with a distinct emphasis.
+  - **Paragraph** — The standard body text block for article content.
+  - **Blockquote** — A visually distinguished quote, typically indented or styled differently from body text.
+  - **Pull Quote** — A highlighted excerpt intended to stand out from surrounding content.
+  - **Caption** — Short descriptive text, most commonly used beneath images.
+  - **Credit** — Attribution text for a source, photographer, or author.
+</Accordion>
+
+### Inline text formatting toolbar
+
+When you highlight text inside any text component, the Text Editor Toolbar appears. Use it to apply the following formatting to your selection:
+
+<Accordion title="Formatting options">
+  **Character styling**
+  - **Bold**
+  - **Italic**
+  - **Underline**
+  - **Superscript** and **Subscript**
+  - **Text colour** and **background colour**
+  - **Special characters**
+
+  **Paragraph and list controls**
+  - **Remove formatting** — strips all inline styling from the selection
+  - **Ordered list** and **unordered list**
+  - **Alignment** — left, centre, right, justify
+  - **Indent** and **outdent**
+
+  **Links**
+  - **Hyperlink** — enter a web URL, a mailto: address, or a custom URL scheme
+  - **Page Link** — link directly to another article in the same issue (supported on PWA, Paperlit, Pugpig, and Maz channels)
+  - **Inline image** — embed an image directly inside the text flow
+</Accordion>
+
+<Note>
+  The colour palette available in the text formatting toolbar can be customised via Publication Settings. To change font style, padding, or other typographic settings, edit the style applied to the article. To apply different text formatting to a specific section, use a Custom Style Block.
+</Note>
+
+### Splitting text components
+
+You can split a text component by inserting a break inside it. Once a break is created, that break becomes a valid drop zone — you can drag other components (such as a subtitle or image) into the gap between the two sections of text.
+
+<Warning>
+  Once a text component has been split it cannot be rejoined — the two halves become separate, independent components.
+</Warning>
+
+---
+
+## Image Component
+
+The Image component lets you upload and display a photograph or graphic inside your article. Select an image on the canvas to open the Image Properties panel, where all the following settings are available.
+
+<Accordion title="Image properties">
+  - **Add/Edit Image** — Upload a new image or swap the current one.
+  - **Crop** — Click the crop icon on the image thumbnail to open the cropping tool and adjust framing.
+  - **Link** — Attach a web URL or page link to the image so readers can tap or click it. Page links are supported on PWA, Paperlit, Pugpig, and Maz channels.
+  - **Open in New Window** — When a link is attached, choose whether selecting the image opens the link in a new browser tab or redirects in the current one.
+  - **Caption** — Add a descriptive caption displayed beneath the image.
+  - **Credit** — Attribute the image to a photographer or source.
+  - **Filter** — Apply an Instagram-style filter to the image. See [Image Filters](/articles/media-components#image-filters) for the full list of available filters.
+  - **Full Bleed** — Stretches the image to the full width of the page, removing any padding.
+  - **Use RAW** — Images over 2048px are automatically optimised when uploaded. Enable this to use the original un-optimised file instead.
+  - **Expand Full Width** — Expands the image to its full natural width within the article.
+  - **Force Full Width** — Enlarges the image to fill the entire device width, even if the original image is smaller. Note that significant upscaling may cause pixelation.
+  - **Make Unselectable** — Prevents the image from being selectable in the final article. Only applicable for Pugpig Publish channels.
+  - **Fixed Width** — Resize the image to a specific pixel width. Setting a fixed width larger than the raw image size may cause pixelation.
+  - **Display On Device** — Choose which device types (mobile, tablet, desktop) display the image. The default is all three.
+  - **Tag** — Tag the image with keywords for organisational purposes.
+</Accordion>
+
+---
+
+## Inline Images
+
+Inline images let you embed an image directly within a line of text without using a standalone Image component. The image flows with the surrounding text content.
+
+<Steps>
+  <Step title="Highlight a position in text">
+    In the Article Builder, click inside a text component and place your cursor where you want the image to appear.
+  </Step>
+  <Step title="Click the Image icon">
+    In the Text Formatting Bar that appears, select the **Image** icon.
+  </Step>
+  <Step title="Choose an image">
+    In the popup, either select a local image file from your device or enter an image URL, then click **Insert Image**.
+  </Step>
+  <Step title="Resize if needed">
+    With the inline image on the canvas, drag a corner handle to resize it. To remove it, click just in front of the image and press **Backspace**.
+  </Step>
+</Steps>
+
+---
+
+## Gallery Component
+
+The Gallery component displays multiple images in a slideshow that readers can navigate through.
+
+<Accordion title="Gallery settings">
+  - **Speed** — Controls how fast the gallery transitions from one image to the next.
+  - **Autoplay** — When enabled, the gallery advances automatically as soon as it comes into view. When disabled, readers use manual controls or the navigation dots.
+  - **Animation** — Choose between **Slide** (images move left to right) and **Fade** (images cross-fade).
+  - **Direction** — Available when Slide is selected. Choose between a horizontal (left-to-right) or vertical (top-to-bottom) slide direction.
+  - **Aspect Ratio** — Set an expected aspect ratio for the gallery. Images that do not match show a warning icon, and clicking Crop on that image opens the cropper pre-set to the selected ratio.
+  - **Gallery Caption** — Add a single caption for the entire gallery by enabling the slider and entering text.
+  - **Per-image caption** — Click the speech bubble icon next to any individual image in the upload list to add a caption specific to that slide.
+  - **Image Ordering** — Drag images in the upload list using the placement button to change their order in the slideshow.
+  - **Full Bleed** — Fits the gallery to the full width of the page, removing padding.
+  - **Display On Device** — Choose which device types display the gallery. The default is mobile, tablet, and desktop.
+</Accordion>
+
+<Tip>
+  You can create a gallery quickly from the canvas by holding the Magic Key (`Cmd` / `Ctrl`) and dragging one image component onto another.
+</Tip>
+
+---
+
+## Button Component
+
+The Button component creates a call-to-action element that links to a web page or other external content.
+
+### Creating a button style
+
+Before using a Button component, create a button style in your publication's Style Manager to ensure consistent visual branding.
+
+<Steps>
+  <Step title="Open the style">
+    Navigate to the style you want to add a button to and scroll down to the **Buttons** section.
+  </Step>
+  <Step title="Create a button">
+    Click **+ Create Button**, assign a name, then use the Paintbrush icon to set properties including Size, Font, Text Size, Button Colour, Text Colour, Letter Spacing, Bottom Margin, Line Height, and Case.
+  </Step>
+  <Step title="Save the style">
+    Save the style to make the button available in the Article Builder.
+  </Step>
+</Steps>
+
+### Using the Button component
+
+<Accordion title="Button properties">
+  - **Style** — Select a button style you have created, or choose **None** for the default appearance.
+  - **Text** — The label displayed inside the button.
+  - **URL** — A web link, anchor link, or custom URL scheme (for platforms such as Twixl Publisher).
+  - **Open in New Window** — Choose whether the link opens in a new tab or redirects in the current window.
+  - **Alignment** — Align the button to the left, centre, or right of the canvas.
+  - **Size** — Select **Use Style** to inherit size from the applied button style, or choose Small, Medium, or Large.
+  - **Display On** — Select which device types display the button.
+</Accordion>
+
+---
+
+## Table Component
+
+The Table component lets you embed data tables in an article by uploading a CSV file.
+
+<Accordion title="Table settings">
+  - **Upload CSV** — Upload a CSV file to populate the table. The data renders as an interactive table in the published article.
+  - **Credit** — Add a caption or data source attribution below the table.
+  - **Full Bleed** — Stretches the table to the full canvas width, ignoring padding.
+  - **Display On Device** — Choose which device types display the table. The default is mobile, tablet, and desktop.
+</Accordion>
+
+---
+
+## Anchor Component
+
+Anchor components create named jump points within an article, enabling in-page navigation — such as a "back to top" link at the bottom of a long article.
+
+<Steps>
+  <Step title="Place the anchor">
+    From the Media list in the Component Panel, drag an **Anchor Component** to the location in the article that readers will jump *to*.
+  </Step>
+  <Step title="Set a unique ID">
+    Select the anchor component and enter a unique ID, for example `#TopOfPage`. IDs must begin with a letter (A–Z).
+  </Step>
+  <Step title="Create the link">
+    Highlight the text that will act as the clickable link, then click the **Hyperlink** icon in the formatting toolbar and enter the anchor ID: `#TopOfPage`.
+  </Step>
+</Steps>
+
+To link to an anchor in a different article, enter the full URL of that article followed by the anchor ID — for example: `https://example.com/article.html#TopOfPage`.
+
+<Warning>
+  If you use multiple anchors on the same page, each one must have a unique ID.
+</Warning>
+
+---
+
+## Custom Code Component
+
+The Custom Code component lets you add HTML markup, third-party embed scripts, or packaged Zip file projects to an article.
+
+<Accordion title="Writing custom HTML">
+  Enter HTML markup directly into the code area:
+
+  ```html
+  <h1>Hello World</h1>
+  <p>My content goes here.</p>
+  ```
+
+  You can also include a `<style>` block to apply custom CSS:
+
+  ```html
+  <style>
+    h1 { color: red; font-size: 2em; }
+  </style>
+  <h1>Hello World</h1>
+  ```
+</Accordion>
+
+<Accordion title="Embedding third-party scripts">
+  Paste the full script — including `<script></script>` tags — into the text area and save the article. Most embedded content appears immediately; some scripts may require a page refresh after saving.
+</Accordion>
+
+<Accordion title="Uploading a Zip file">
+  For complex custom projects, create your code in an external editor and package it as a Zip file. The Zip must contain an `index.html` file at the root, with all asset references relative to that root. Use the **Select Zip** button to upload the file. When publishing to a supported channel, all included assets are delivered to the device and available offline.
+</Accordion>
+
+<Accordion title="Custom code options">
+  - **Full Bleed** — Expands the component to the full canvas width, overriding padding.
+  - **Inline Content** — By default, custom code runs inside an iframe to prevent conflicts with the Canvasflow codebase. Enable **Inline Content** to inject the code directly into the page — useful when the script needs to adjust its own container height or reference Canvasflow CSS. Use with care and do not save if you notice unexpected side effects; refreshing the browser reverts to the last saved state.
+  - **Display On Device** — Choose which device types display the component.
+</Accordion>
+
+<Note>
+  As a security measure, some embedded content may not appear while you are logged into the editor. As long as the code is valid, it should be visible to readers after publishing. If it still does not appear after publishing, contact the third-party service that provided the embed code.
+</Note>
+
+---
+
+## Snippets
+
+Snippets are reusable content blocks — similar to templates, but designed to be dropped into articles that already exist. Where a template is used only when creating a new article, a snippet can be placed into any article at any time.
+
+### Creating a snippet
+
+Create a snippet in the same way as a template. When creating or editing a template, set the **Type** dropdown to **Snippet** to make it appear in the Snippets tab of the Article Builder rather than in the template list.
+
+### Using snippets
+
+<Steps>
+  <Step title="Open the Snippets tab">
+    In the Article Builder's Component Panel, select the **Snippets** tab. All snippets available to the publication are listed here.
+  </Step>
+  <Step title="Drag onto the canvas">
+    Drag the snippet you want onto the canvas. All of the snippet's components are placed at once and immediately inherit the current article's style.
+  </Step>
+</Steps>
+
+<Tip>
+  Snippets are ideal for recurring content patterns — such as a standard author bio block, a newsletter sign-up prompt, or a branded call-to-action section — that you use across multiple articles.
+</Tip>
+
+---
+
+## Infogram Component
+
+The Infogram component embeds Infogram charts and data visualisations directly into an article. While you can embed Infogram content using the Custom Code component, the dedicated Infogram component is recommended because it offers additional configuration options.
+
+<Accordion title="Infogram settings">
+  - **Embed Code** — Paste the embed code from your Infogram project here.
+  - **Embed Type** — Canvasflow detects and sets the type automatically. You can change it:
+    - **Responsive (Async)** — Recommended. The embed adjusts to its container and adapts to screen size using an optimised asynchronous code.
+    - **Responsive** — Adjusts to the container and screen size.
+    - **Fixed** — Uses a fixed embed size that does not adapt to the container.
+  - **Set Max Width** — Limits the maximum width of the Infogram component within the article. By default, it fills the available container width.
+  - **Display On Device** — Choose which device types display the component.
+</Accordion>
+
+<Note>
+  All Infogram components are automatically centred within their container.
+</Note>
+
+---
+
+## Twitter/X Component
+
+The Twitter component embeds the public tweet feed of any Twitter (X) account directly in an article.
+
+<Steps>
+  <Step title="Place the component">
+    Drag a Twitter component onto the canvas.
+  </Step>
+  <Step title="Enter the Twitter handle">
+    Type the Twitter handle of the account you want to display into the top field.
+  </Step>
+  <Step title="Set a fixed height (optional)">
+    By default, the component displays the last 20 tweets and can take up significant vertical space. Enable **Fixed Height** to set a specific height and add a scrollbar for readers.
+  </Step>
+</Steps>
+
+The **Display On Device** option lets you control which device types show the Twitter component. The default is all device types.
+
+---
+
+## Full Page Advert Component
+
+The Full Page Advert component inserts a full-page advertisement image into an article.
+
+<Accordion title="Full Page Advert settings">
+  - **Fit Height** — Letterboxes the advert to always fit the device height without scrolling.
+  - **Fit Width** — Scales the image to fit the device width and creates a scrollable page.
+  - **Full Bleed** — Removes padding so the advert fills the full page width.
+  - **Use RAW** — Uses the original un-optimised image file instead of the automatically optimised version.
+  - **Make Unselectable** — Prevents the advert image from being selectable. Only applicable for Pugpig Publish channels.
+</Accordion>

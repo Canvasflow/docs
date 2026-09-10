@@ -1,0 +1,70 @@
+---
+title: "Connect Canvasflow to Zinio for Digital Distribution"
+sidebarTitle: "Zinio"
+description: "Set up a Zinio publish channel in Canvasflow, publish your articles, and distribute complete issues to readers via the Zinio digital newsstand platform."
+---
+
+Zinio is one of the world's leading digital newsstand platforms, delivering publications to readers across devices worldwide. By connecting Canvasflow to Zinio, you can publish your articles in Prism XML format and upload them directly to the Zinio distribution platform — keeping your entire production workflow within Canvasflow.
+
+## Overview
+
+The Zinio integration works by exporting your published articles as a structured ZIP archive in Prism XML format. This file contains each article as an individual XML document along with all associated images. You then upload this archive to Zinio using their upload tool to make the issue available to subscribers.
+
+Before you can publish to Zinio, you need to add a Zinio publish channel to your brand in Canvasflow.
+
+## Connecting to Zinio
+
+<Steps>
+  <Step title="Open Brand Manager">
+    Navigate to **Brand Manager** in Canvasflow.
+  </Step>
+  <Step title="Open Brand Settings">
+    Hover over the brand you want to connect and click the `Settings` button to open **Brand Settings**.
+  </Step>
+  <Step title="Go to Publish Channels">
+    Select the **Publish Channels** tab.
+  </Step>
+  <Step title="Add a new channel">
+    Click the **Add New** icon.
+  </Step>
+  <Step title="Configure the Zinio channel">
+    Enter a **Channel Name** for the channel, then select `Zinio` from the **Channel Selector** dropdown.
+  </Step>
+  <Step title="Save the channel">
+    Click **Add Channel**. The Zinio channel is now connected to your brand and ready to use.
+  </Step>
+</Steps>
+
+<Note>
+  You can add multiple publish channels to a single brand. If you distribute to several platforms, each channel can be configured separately under the same **Publish Channels** tab.
+</Note>
+
+## Publishing to Zinio
+
+Once your Zinio channel is set up, follow these steps each time you want to publish an issue.
+
+<Steps>
+  <Step title="Set the Issue ID and Release Date">
+    Navigate to **Issue Manager** and click the `Settings` icon for the issue you want to publish. Enter an **Issue ID** and a **Release Date** — both fields are mandatory for Zinio and must be completed before you can publish. Click `Update` to save the issue settings.
+  </Step>
+  <Step title="Go to Article Manager">
+    Navigate to the **Article Manager** view for the issue.
+  </Step>
+  <Step title="Publish your articles">
+    Tick the checkboxes next to all the articles you want to include in the Zinio issue, then click **Publish Selected** in the toolbar. Only published articles will be included in the export.
+  </Step>
+  <Step title="Download the Prism XML package">
+    Once the articles are published, click the **Download Prism XML** button in the toolbar. Canvasflow will compile all the published articles and their images into a single ZIP archive.
+  </Step>
+  <Step title="Upload to Zinio">
+    When the download completes, open the ZIP file to verify its contents — it will contain one XML file per article and all associated images. Upload this file to Zinio using their upload tool to make the issue available to subscribers.
+  </Step>
+</Steps>
+
+<Warning>
+  The **Issue ID** and **Release Date** fields in Issue Settings are required by Zinio. Publishing without completing both fields will result in an incomplete package that Zinio will not accept.
+</Warning>
+
+<Tip>
+  If you update any articles after publishing, re-publish them before downloading the Prism XML package to ensure the ZIP contains the latest version of your content.
+</Tip>

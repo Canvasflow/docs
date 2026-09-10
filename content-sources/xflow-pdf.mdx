@@ -1,0 +1,150 @@
+---
+title: "Import PDFs into Canvasflow Automatically with xFlow"
+sidebarTitle: "xFlow PDF"
+description: "Use Canvasflow's xFlow service to import PDF files automatically via FTP and convert them into fully responsive digital articles without manual effort."
+---
+
+Canvasflow's xFlow service automates the conversion of print-ready PDF files into fully responsive digital articles. Once set up, you deliver PDF files to a dedicated FTP location and xFlow picks them up, processes them, and creates Canvasflow articles — extracting text, images, and layout data automatically. This page explains how to configure your FTP client, deliver files correctly, and prepare your PDFs for the best possible output.
+
+<Note>
+  The xFlow service must be activated for your account before you can use it. Contact [support@canvasflow.io](mailto:support@canvasflow.io) to request activation and receive your FTP credentials.
+</Note>
+
+---
+
+## xFlow FTP Setup
+
+Canvasflow uses Amazon S3-compatible storage as the FTP endpoint. To connect, you need three pieces of information provided by the Canvasflow support team:
+
+- **Access Key ID** — authenticates your identity (e.g. `BKIA9SPMJHIEZF4WYOSO`)
+- **Secret Access Key** — used together with the Access Key ID to sign requests
+- **Remote Path** — the target folder in the Canvasflow storage bucket (e.g. `/canvasflow-remote-path`)
+
+### Compatible FTP Clients
+
+Use any FTP or SFTP client that supports the Amazon S3 protocol. The following clients are all compatible:
+
+<CardGroup cols={2}>
+  <Card title="FileZilla Pro" icon="folder-open" href="https://filezilla-project.org/">
+    Windows, macOS, and Linux. The Pro edition is required for S3 support.
+  </Card>
+  <Card title="Cyberduck" icon="folder-open" href="https://cyberduck.io/">
+    Windows and macOS. Free and open source.
+  </Card>
+  <Card title="WinSCP" icon="folder-open" href="https://winscp.net/eng/download.php">
+    Windows only. Free and open source.
+  </Card>
+  <Card title="Transmit" icon="folder-open" href="https://panic.com/transmit/">
+    macOS only. Polished native client.
+  </Card>
+  <Card title="ForkLift 3" icon="folder-open" href="https://binarynights.com/">
+    macOS only. Dual-pane file manager with S3 support.
+  </Card>
+</CardGroup>
+
+### Configuring Your FTP Client
+
+<Steps>
+  <Step title="Open a new connection in your FTP client">
+    Create a new connection or bookmark in your chosen FTP client.
+  </Step>
+  <Step title="Set the protocol to Amazon S3">
+    In the protocol or connection-type selector, choose **Amazon S3** (sometimes labelled **S3**). Do not use SFTP or standard FTP — they will not connect to the Canvasflow endpoint.
+  </Step>
+  <Step title="Enter the connection details">
+    Fill in the fields using the credentials provided by Canvasflow:
+
+    | Field | Value |
+    |---|---|
+    | Protocol | Amazon S3 |
+    | Address / Server | `s3.amazonaws.com` |
+    | Access Key ID | *(provided by Canvasflow)* |
+    | Secret Access Key | *(provided by Canvasflow)* |
+    | Remote Path | *(provided by Canvasflow — must begin with `/`)* |
+
+    <Warning>
+      Always include the leading `/` in the remote path. Omitting it will prevent the client from connecting to the correct folder.
+    </Warning>
+  </Step>
+  <Step title="Connect and verify">
+    Connect to the server. If credentials are correct, you will see your designated upload folder. You are now ready to deliver PDF files.
+  </Step>
+</Steps>
+
+<Note>
+  If your workflow requires programmatic access via API rather than an FTP client, Canvasflow supports this. Contact [support@canvasflow.io](mailto:support@canvasflow.io) for API access details.
+</Note>
+
+---
+
+## Delivering Files via FTP
+
+<Steps>
+  <Step title="Connect to the FTP endpoint">
+    Open your configured FTP client and connect using your xFlow credentials.
+  </Step>
+  <Step title="Upload the PDF">
+    Drop your PDF file into the remote upload folder. The upload begins immediately. Depending on your internet connection speed, this may take anywhere from a few seconds to several minutes for large files.
+  </Step>
+  <Step title="Wait for processing to begin">
+    Once the upload is complete, xFlow detects the file automatically — usually within a few seconds. When processing begins, the file is moved out of the upload folder and into the processing queue. The PDF will disappear from the upload folder at this point; this is expected behaviour.
+  </Step>
+  <Step title="Review the processed article in Canvasflow">
+    After processing is complete, log in to your Canvasflow account to view the resulting article. Processing time varies depending on file size and current queue activity.
+  </Step>
+</Steps>
+
+<Warning>
+  Your FTP account has **write-only** access to the upload folder. You can upload files, but you cannot edit or delete them. If you upload a file in error, contact the Canvasflow team at [production@canvasflow.io](mailto:production@canvasflow.io) to have it removed.
+</Warning>
+
+---
+
+## Preparing Your PDF for Best Results
+
+xFlow can process almost any PDF, but following these guidelines will produce the highest-quality output.
+
+<AccordionGroup>
+  <Accordion title="PDF structure">
+    - Send content as a **single, multi-page PDF** rather than multiple individual files.
+    - Every page must be an **individual page** — do not use spreads.
+    - Make sure pages are in the correct reading order.
+    - Set trim-boxes accurately so that only the relevant page content is shown, with **no bleed or overlap** from adjacent pages.
+    - Do not apply security restrictions or compression to the PDF.
+  </Accordion>
+  <Accordion title="Text and fonts">
+    - Fully embed all fonts in the PDF.
+    - Do not flatten, rasterise, or convert text to outlines/paths — xFlow needs live text to extract content accurately.
+    - If you use glyph substitution or stylistic fonts that visually alter characters (e.g. small-caps), note that xFlow extracts the underlying character, not the visual representation. Use uppercase characters in the source so that the extracted text is uppercase.
+  </Accordion>
+  <Accordion title="Images">
+    - Avoid flattening images or merging layers where possible — keeping images as separate objects allows xFlow to extract them individually.
+    - Do not down-sample images. Aim for a maximum width or height of **2,400 px** for large images to ensure a crisp appearance on screen.
+    - **300 DPI or higher** is preferred and will produce the best results.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Replica Mode for PWA
+
+If you publish your Canvasflow articles to the Progressive Web App (PWA) channel, xFlow supports a **Replica Mode** that preserves the visual layout of each PDF page as a high-fidelity image replica, while still making the article text searchable and accessible. Contact [support@canvasflow.io](mailto:support@canvasflow.io) to discuss whether Replica Mode is appropriate for your workflow.
+
+---
+
+## Getting Started with xFlow
+
+<Steps>
+  <Step title="Request xFlow activation">
+    Contact [support@canvasflow.io](mailto:support@canvasflow.io) to request activation of the xFlow service for your Canvasflow account.
+  </Step>
+  <Step title="Receive your FTP credentials">
+    The Canvasflow support team will provide your **Access Key ID**, **Secret Access Key**, and **Remote Path**.
+  </Step>
+  <Step title="Configure your FTP client">
+    Follow the [xFlow FTP Setup](#xflow-ftp-setup) steps above to connect your FTP client to the Canvasflow S3 endpoint.
+  </Step>
+  <Step title="Deliver your first PDF">
+    Upload a test PDF to confirm the end-to-end workflow is working correctly before moving to production.
+  </Step>
+</Steps>

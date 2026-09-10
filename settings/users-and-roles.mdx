@@ -1,0 +1,172 @@
+---
+title: "Managing Users, Roles, and Permissions in Canvasflow"
+sidebarTitle: "Users & Roles"
+description: "Manage your Canvasflow team with role-based access control. Understand the five user roles and how to create, assign, and remove users."
+---
+
+Canvasflow manages users on a per-publication basis, allowing multiple team members to collaborate on a publication simultaneously. Each user is assigned one of five roles that determines what they can see and do across the platform. Understanding these roles before creating user accounts helps you maintain a clean, secure workflow for your team.
+
+## The Five User Roles
+
+Canvasflow provides five distinct roles ranging from full system access down to a focused read-and-edit permission set. Every user you add must be assigned exactly one of these roles.
+
+<CardGroup cols={1}>
+  <Card title="Master" icon="crown">
+    The person who initially signs up for a Canvasflow account is automatically assigned the **Master** role. Masters have complete access to every publication within the account and can view, create, and delete any publication. If you need to transfer ownership to another team member, you can do this within your account settings or by contacting support.
+  </Card>
+  <Card title="Administrator" icon="shield-check">
+    Administrators hold the same rights as the Master role but only within the publications they have been assigned to. They cannot create, delete, or assign users to publications they are not an Administrator of, and they only see publications the Master has explicitly added them to.
+  </Card>
+  <Card title="Editor" icon="pen-to-square">
+    Editors can perform all core actions needed to manage an existing publication — including publishing content changes — but they cannot create or manage new publications. This is the right role for editorial team members who need broad day-to-day control.
+  </Card>
+  <Card title="Contributor" icon="user-pen">
+    Contributors can create and edit articles and perform basic article administration, but they cannot download, publish, or delete content, and they have no access to publication settings. This role suits both internal and external contributors who need to add content without broader publishing rights.
+  </Card>
+  <Card title="Proofreader" icon="magnifying-glass">
+    Proofreaders are the most restricted role. They can open existing articles, make content changes, and save — but they cannot add new components, create or delete articles, publish content, access account settings, or manage other users. Use this role for reviewers and sign-off stakeholders.
+  </Card>
+</CardGroup>
+
+## Role Permissions Matrix
+
+The table below shows a full breakdown of which actions are available to each role.
+
+| Permission | Master | Administrator | Editor | Contributor | Proofreader |
+|---|:---:|:---:|:---:|:---:|:---:|
+| Full Account Access | ✔ | — | — | — | — |
+| View All Publications | ✔ | — | — | — | — |
+| Create Publication | ✔ | — | — | — | — |
+| Delete Publication | ✔ | ✔ | — | — | — |
+| Publication Settings | ✔ | ✔ | — | — | — |
+| Manage Users | ✔ | ✔ | — | — | — |
+| Create Issue | ✔ | ✔ | ✔ | — | — |
+| Edit Issue | ✔ | ✔ | ✔ | — | — |
+| Delete Issue | ✔ | ✔ | ✔ | — | — |
+| Style Manager | ✔ | ✔ | ✔ | — | — |
+| Template Manager | ✔ | ✔ | ✔ | — | — |
+| Publish Article | ✔ | ✔ | ✔ | — | — |
+| Publish All Articles | ✔ | ✔ | ✔ | — | — |
+| Change Article Style | ✔ | ✔ | ✔ | — | — |
+| Unpublish Article | ✔ | ✔ | ✔ | — | — |
+| Create Article | ✔ | ✔ | ✔ | ✔ | — |
+| Edit Article Metadata | ✔ | ✔ | ✔ | ✔ | — |
+| Move Article | ✔ | ✔ | ✔ | ✔ | — |
+| Hide Article | ✔ | ✔ | ✔ | — | — |
+| Reorder Article | ✔ | ✔ | ✔ | ✔ | — |
+| Duplicate Article | ✔ | ✔ | ✔ | ✔ | — |
+| Download Article | ✔ | ✔ | ✔ | — | — |
+| Delete Article | ✔ | ✔ | ✔ | — | — |
+| Create PDF | ✔ | ✔ | ✔ | — | — |
+| Add Article Components | ✔ | ✔ | ✔ | ✔ | — |
+| Create Twixl Collection | ✔ | ✔ | ✔ | ✔ | — |
+| Create Twixl Content Item | ✔ | ✔ | ✔ | ✔ | — |
+| Send Push Notification | ✔ | ✔ | ✔ | — | — |
+| Update Staging Feed | ✔ | ✔ | ✔ | — | — |
+| Send Issue to Production | ✔ | ✔ | ✔ | — | — |
+| Make Content Changes | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Save Content | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Re-order Canvas Components | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Access Support | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Submit Feature Request | ✔ | ✔ | ✔ | ✔ | ✔ |
+
+<Note>
+  Some permissions are channel-dependent. Certain options only appear if the publication is connected to a publishing channel that supports those actions.
+</Note>
+
+## Managing Users
+
+To access the User Management dashboard, navigate to the **Brand Manager** and hover over your chosen publication, then select the **Settings** (cog) icon. Alternatively, open a publication and click **Settings** in the admin toolbar. From the Publication Settings page, select the **Users** tab.
+
+### Creating a New User
+
+Use this workflow when you need to add a brand-new person to Canvasflow who does not yet have an account.
+
+<Steps>
+  <Step title="Open the Users tab">
+    Navigate to **Publication Settings** and select the **Users** tab.
+  </Step>
+  <Step title="Start a new user">
+    Click the **+** icon to open the Create User panel.
+  </Step>
+  <Step title="Fill in the user details">
+    Enter the user's **Name**, **Email Address**, **Password**, and assign a **Role**. See the role descriptions above if you are unsure which role to assign.
+  </Step>
+  <Step title="Create the account">
+    Click **Create**. The user is now created and can log in immediately with the credentials you provided.
+  </Step>
+</Steps>
+
+### Assigning an Existing User to a Publication
+
+Existing account users can be assigned to multiple publications without needing a separate account for each one. This is the recommended approach when a team member already has a Canvasflow login.
+
+<Steps>
+  <Step title="Open the Users tab">
+    Navigate to **Publication Settings** and select the **Users** tab.
+  </Step>
+  <Step title="Open the Create User panel">
+    Click the **+** icon to open the Create User panel.
+  </Step>
+  <Step title="Switch to Add Existing">
+    Select the **Add Existing** tab within the panel.
+  </Step>
+  <Step title="Select the user">
+    Choose the user you want to assign from the drop-down menu.
+  </Step>
+  <Step title="Confirm">
+    Confirm the selection. The user will have access to the new publication from their next login.
+  </Step>
+</Steps>
+
+<Note>
+  If a user is assigned to multiple publications, they carry the same role and privileges across all of them. It is not currently possible for the same user to have different roles on different publications.
+</Note>
+
+### Removing a User from a Publication
+
+Removing a user revokes their access to a specific publication without deleting their Canvasflow account. You can remove a user from one or more publications at any time.
+
+<Steps>
+  <Step title="Open the Users tab">
+    Navigate to **Publication Settings** for the publication you want to remove the user from, then select the **Users** tab.
+  </Step>
+  <Step title="Find the user">
+    Locate the user you want to remove in the user list.
+  </Step>
+  <Step title="Open the user menu">
+    Click the **More** (⋯) icon next to the user's name.
+  </Step>
+  <Step title="Remove the user">
+    Select **Remove User** from the drop-down menu.
+  </Step>
+</Steps>
+
+<Note>
+  Removing a user does **not** delete their account — it only removes their access to that specific publication. A user who has been removed from all publications in an account can still log in to Canvasflow.
+</Note>
+
+### Editing a User
+
+<Steps>
+  <Step title="Open the Users tab">
+    Navigate to **Publication Settings** and select the **Users** tab.
+  </Step>
+  <Step title="Open the user menu">
+    Find the user you want to edit and click the **More** (⋯) icon next to their name.
+  </Step>
+  <Step title="Select Edit">
+    Choose **Edit** from the drop-down menu to open the Edit User panel.
+  </Step>
+  <Step title="Update and save">
+    Update the user's **Name**, **Email**, or **Role** as needed, then save your changes.
+  </Step>
+</Steps>
+
+### Deleting a User
+
+<Warning>
+  Users cannot be deleted from the **Users** tab inside a publication. Deleting a user permanently removes their account from Canvasflow entirely and is restricted to the **Master** role only.
+</Warning>
+
+To delete a user permanently, access the **Manage Users** section from your account-level settings. This option is only visible to users with the Master role. If you only need to remove someone's access to a publication rather than delete their account entirely, use the **Remove User** workflow above instead.

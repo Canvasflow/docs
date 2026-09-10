@@ -1,0 +1,130 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "Canvasflow",
+  "theme": "willow",
+  "logo": {
+    "light": "https://media.brand.dev/89577b86-ec96-405d-a0a9-dfd6a5ae1e76.png",
+    "dark": "https://media.brand.dev/89577b86-ec96-405d-a0a9-dfd6a5ae1e76.png"
+  },
+  "favicon": "https://media.brand.dev/745f51a8-75c4-41f7-929b-ca223c877691.png",
+  "colors": {
+    "primary": "#1c1c1c",
+    "light": "#ec5b6c",
+    "dark": "#343434"
+  },
+  "fonts": {
+    "heading": {
+      "family": "Source Sans Pro"
+    },
+    "body": {
+      "family": "Source Sans Pro"
+    }
+  },
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Sign In",
+      "href": "https://app.canvasflow.io"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "getting-started/introduction",
+              "getting-started/creating-a-publication",
+              "getting-started/creating-an-article",
+              "getting-started/styles-and-templates",
+              "getting-started/publishing-channels"
+            ]
+          },
+          {
+            "group": "Publications & Issues",
+            "pages": [
+              "publications/managing-publications",
+              "publications/issue-manager",
+              "publications/publication-settings"
+            ]
+          },
+          {
+            "group": "Article Manager",
+            "pages": [
+              "articles/article-manager",
+              "articles/article-builder",
+              "articles/components",
+              "articles/media-components",
+              "articles/working-with-links"
+            ]
+          },
+          {
+            "group": "Design",
+            "pages": [
+              "design/styles-overview",
+              "design/building-a-style",
+              "design/templates-overview",
+              "design/building-a-template",
+              "design/custom-fonts"
+            ]
+          },
+          {
+            "group": "Settings",
+            "pages": [
+              "settings/users-and-roles",
+              "settings/publication-details",
+              "settings/multi-language"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Publishing Channels",
+        "groups": [
+          {
+            "group": "Web & App",
+            "pages": [
+              "publish/pwa",
+              "publish/apple-news",
+              "publish/wordpress"
+            ]
+          },
+          {
+            "group": "Export Formats",
+            "pages": [
+              "publish/pdf",
+              "publish/html-email",
+              "publish/xml"
+            ]
+          },
+          {
+            "group": "Third-Party Platforms",
+            "pages": [
+              "publish/twixl",
+              "publish/zinio",
+              "publish/cafeyn",
+              "publish/paperlit",
+              "publish/hpub"
+            ]
+          },
+          {
+            "group": "Content Sources",
+            "pages": [
+              "content-sources/indesign-plugin",
+              "content-sources/wordpress-to-canvasflow",
+              "content-sources/xflow-pdf"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "website": "https://canvasflow.io"
+    }
+  },
+  "redirects": []
+}

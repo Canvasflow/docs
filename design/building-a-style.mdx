@@ -1,0 +1,230 @@
+---
+title: "Style Builder: Customise Fonts, Canvas, and Components"
+sidebarTitle: "Build a Style"
+description: "Step-by-step guide to building a Canvasflow style: configure canvas settings, customise text components, work with fonts, and use custom style blocks."
+---
+
+Once you have created a style in the Style Manager, the next step is to open it in the **Style Builder** and configure exactly how your articles will look. The Style Builder presents a live canvas with representative text components, layout dividers, and an image placeholder — giving you a real-time preview as you make changes. Every property you set here is inherited by every article and template that uses the style.
+
+## Opening the Style Builder
+
+In the Style Manager, click the name of the style you want to edit. The Style Builder opens with a default canvas and a set of text and layout components arranged on it. The left-hand panel shows the properties for whatever component is currently selected.
+
+## Customising the Canvas
+
+The canvas is the page on which all article content sits. It defines the article's background colour, padding, borders, and (when publishing to the web) the body background colour. Configuring the canvas well sets the visual foundation for everything else in the style.
+
+<Steps>
+  <Step title="Open canvas settings">
+    In the Style Builder, click the **Style Canvas** icon (a white brush in a green circle) at the top right of the canvas. The canvas properties panel appears on the left.
+  </Step>
+  <Step title="Set canvas and background colours">
+    Under **Colour**, set:
+    - **Canvas** — the background colour of the article canvas itself.
+    - **Background** — the colour of the body surrounding the canvas. This is visible only when publishing to the web or HTML email. For app-only publications, set it to match the canvas colour.
+  </Step>
+  <Step title="Configure padding">
+    Under **Padding**, set top, bottom, left, and right values in either `px` or `%`. Use percentage padding for responsive designs — 5% padding will always be 5% of the viewer's screen width, ensuring consistent proportional spacing across all device sizes.
+  </Step>
+  <Step title="Set margins">
+    Under **Margin**, define the top, bottom, left, and right margins of the canvas. Each edge can use its own unit (`px`, `pt`, or `%`), set independently by clicking the unit label.
+  </Step>
+  <Step title="Add borders (optional)">
+    Under **Border**, configure style (Solid, Dashed, etc.), position, width, colour, radius, and box shadow as needed.
+  </Step>
+  <Step title="Save">
+    Click **Save** in the Menu Bar to apply your canvas changes.
+  </Step>
+</Steps>
+
+<Note>
+  When publishing to Apple News, use the **Column Start** and **Column Span** canvas options to control how content aligns to the Apple News column grid. For example, setting Start = 0 and Span = 5 on a five-column canvas stretches content across the full width.
+</Note>
+
+## Customising Text Component Styles
+
+All Canvasflow text components — Title, Subtitle, Paragraph, Caption, Pull Quote, and others — are individually customisable. Each component's properties are displayed in the left panel when the component is selected.
+
+<Steps>
+  <Step title="Select a text component">
+    In the Style Builder canvas, click the text component you want to customise (for example, the Paragraph block). The **Component Properties** panel opens on the left.
+  </Step>
+  <Step title="Set the font family and variants">
+    Under **Font Family**, set the **Normal** typeface. Also set the **Bold**, **Italic**, and **BoldItalic** variants to explicit font files — this prevents browsers from generating faux (simulated) bold or italic styles. See [Font Style Variants](#font-style-variants) below.
+  </Step>
+  <Step title="Configure colour">
+    - **Colour** — the text colour.
+    - **Background** — a background colour behind the text, if required.
+  </Step>
+  <Step title="Set basic formatting">
+    Adjust:
+    - **Size** — in `pt` or `em`.
+    - **Line Height** — vertical spacing between lines, in `%`, `px`, or `pt`.
+    - **Letter Spacing** — spacing between individual characters.
+    - **Text Align** — Left, Centre, Right, or Justify.
+    - **Case** — Default, Capitalise, UPPERCASE, or lowercase.
+    - **Width** — restrict the text column width as a percentage.
+    - **Display** — Block, Inline, Inline Block, or Hidden.
+  </Step>
+  <Step title="Configure margin and padding">
+    Set **Margin Top**, **Margin Bottom**, and all four **Padding** values to control spacing above, below, and around the component.
+  </Step>
+  <Step title="Add borders (optional)">
+    Under **Border**, set style, position, width, colour, and radius independently for each text component.
+  </Step>
+  <Step title="Style links">
+    Under **Links**, configure the colour, weight, and decoration of hyperlinks that appear within this text component.
+  </Step>
+  <Step title="Configure Drop Caps (optional)">
+    Use the **Drop Cap Formatting** section to define the typeface, size, line height, and character count for drop caps in this component.
+  </Step>
+  <Step title="Save">
+    Click **Save** to commit your changes to the style.
+  </Step>
+</Steps>
+
+<Tip>
+  Double-click any slider in the properties panel to type a precise numerical value directly.
+</Tip>
+
+## Font Style Variants
+
+Font Style Variants let you specify explicit font files for the bold, italic, and bold-italic states of each text component. Without this, browsers will attempt to synthesise these styles from the regular font file — producing what is known as a "faux" style that often looks noticeably different from the true typeface.
+
+<Steps>
+  <Step title="Select a text component">
+    In the Style Builder, click the text component you want to configure.
+  </Step>
+  <Step title="Expand Font Family">
+    In the properties panel, locate the **Font Family** section.
+  </Step>
+  <Step title="Set each variant">
+    - **Normal** — your default typeface (e.g. *Aleo-Regular*).
+    - **Bold** — the official bold cut (e.g. *Aleo-Bold*).
+    - **Italic** — the official italic cut (e.g. *Aleo-Italic*).
+    - **BoldItalic** — the official bold-italic cut (e.g. *Aleo-BoldItalic*).
+  </Step>
+  <Step title="Save">
+    Save the style to apply the variant mappings.
+  </Step>
+</Steps>
+
+<Note>
+  It is strongly recommended to set explicit Bold, Italic, and BoldItalic variants for every custom font you use. For standard web-safe fonts such as Arial or Times New Roman, the browser's built-in variants are reliable and this step is optional.
+</Note>
+
+## Avoiding Faux Browser Styles
+
+If a text component uses a custom font but the bold or italic variants are **not** mapped in Font Family, some browsers will try to synthesise these styles from the normal font file. The result — called a faux browser style — is an imperfect imitation that can harm readability and brand consistency.
+
+The most reliable way to eliminate faux styles is to use Font Style Variants (described above). For cases where you need more granular control, the **Custom CSS Editor** lets you write explicit CSS rules per component.
+
+### Using the Custom CSS Editor
+
+<Steps>
+  <Step title="Open the style">
+    Open the relevant style in the Style Builder and select the text component you want to configure.
+  </Step>
+  <Step title="Open the CSS Editor">
+    Click the **Custom CSS Editor** button in the properties panel.
+  </Step>
+  <Step title="Add font-family rules">
+    In the **All** tab, add rules similar to the following, substituting your actual font names:
+
+    ```css
+    p b {
+      font-family: Aleo-Bold;
+      font-weight: normal;
+    }
+
+    p i {
+      font-family: Aleo-Italic;
+      font-style: normal;
+    }
+
+    p b i {
+      font-family: Aleo-BoldItalic;
+      font-weight: normal;
+      font-style: normal;
+    }
+    ```
+  </Step>
+  <Step title="Apply and save">
+    Click **Apply**, then save the style.
+  </Step>
+</Steps>
+
+<Warning>
+  Always include `font-weight: normal` and `font-style: normal` in your CSS rules. Without them, the browser may stack its own bold or italic synthesis on top of your explicitly loaded font file.
+</Warning>
+
+## Customising Layout Components
+
+Layout components — **Dividers** and **Spacers** — can also be styled within the Style Builder.
+
+- **Dividers** support width, colour, margin, and a choice of line styles (solid, dashed, dotted, and more).
+- **Spacers** come in five preset sizes (Very Small through Very Large), each with an editable height value. For example, you could set Very Small to 4 px and Large to 80 px to create a consistent vertical rhythm.
+
+<Note>
+  Both Dividers and Spacers can be extended further using custom CSS if your design requires it.
+</Note>
+
+## Custom Style Blocks
+
+Custom Style Blocks let you override the active article style for specific sections of an article — such as a highlighted call-out box, a pull quote with a coloured background, or a hero image section. A Style Block is attached to a **Column** component in the Article Builder and applies its own text and background properties to everything inside that column.
+
+Each Style Block inherits all default text component styles from the parent style, and you override only the properties that need to change.
+
+### Creating a Custom Style Block
+
+<Steps>
+  <Step title="Open the style">
+    In Style Manager, select the style you want to add a block to.
+  </Step>
+  <Step title="Scroll to Custom Blocks">
+    Scroll to the bottom of the Style Builder canvas and click **+ Create Block**.
+  </Step>
+  <Step title="Customise text components">
+    Click any text component inside the block to edit its properties (font, colour, size, etc.).
+  </Step>
+  <Step title="Set background and padding">
+    Click the **paintbrush** icon on the block to open block-level canvas settings. Configure background colour or background image, padding, position, and any custom CSS.
+  </Step>
+  <Step title="Save">
+    Click **Save** to update the style.
+  </Step>
+</Steps>
+
+### Editing a Custom Style Block
+
+To edit an existing block, click the text component you want to change and apply new properties in the left panel. To change the block's background, padding, or custom CSS, click the paintbrush icon on the block.
+
+To **rename**, **duplicate**, or **delete** a block, click the **More Options** button on the block.
+
+### Applying a Custom Style Block to Article Content
+
+<Steps>
+  <Step title="Open the article">
+    Open the article in Article Builder.
+  </Step>
+  <Step title="Add a Column component">
+    Drag a **Column** component from the Layouts panel onto the canvas and add your content inside it.
+  </Step>
+  <Step title="Open column properties">
+    Hover over the column and click the **paintbrush** icon.
+  </Step>
+  <Step title="Select the Style Block">
+    In the column properties panel, open the **Style Block** dropdown and choose the block you want to apply.
+  </Step>
+  <Step title="Save the article">
+    Click **Save** to commit the change.
+  </Step>
+</Steps>
+
+<Tip>
+  Use a Custom Style Block as a **hero image**: apply the block to a column component, set a background image in the block properties, and add text components inside the column to overlay text on the image.
+</Tip>
+
+<Note>
+  Padding applied to a Style Block is **in addition to** the canvas padding already defined in the style. There is no limit to the number of times a Style Block can be applied across articles.
+</Note>

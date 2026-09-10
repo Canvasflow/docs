@@ -1,0 +1,163 @@
+---
+title: "How to Publish in Multiple Languages with Canvasflow"
+sidebarTitle: "Multi-Language"
+description: "Publish Canvasflow articles in multiple languages using manual translation or the automatic AI-powered language translation service."
+---
+
+Canvasflow's multi-language support lets you maintain a single article layout and asset set while managing separate text content for each language you publish in. This means your team can translate article copy into any number of languages without duplicating layout work — the structure, images, and design remain consistent across every language version. Multi-language publishing is available on the **PWA** and **WebPublish** channels.
+
+## Setting Up Languages on a Publication
+
+Before you can work with multiple languages, you need to enable them at the publication level. Each language you add is identified by its [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) two-letter language code (for example, `en` for English, `de` for German, `fr` for French).
+
+<Steps>
+  <Step title="Open Publication Settings">
+    From the **Brand Manager**, hover over the publication you want to configure and click the **Settings** (cog) icon.
+  </Step>
+  <Step title="Open the Languages tab">
+    Select the **Languages** tab from the Publication Settings page.
+  </Step>
+  <Step title="Review current languages">
+    You will see which languages are already enabled for the publication and which connected channels are using each language as their default.
+  </Step>
+  <Step title="Add new languages">
+    Check the box next to each language you want to enable.
+  </Step>
+  <Step title="Save">
+    Click **Save** to apply the changes. The selected languages are now available across the publication.
+  </Step>
+</Steps>
+
+<Note>
+  Multi-language publishing is currently only supported by the **PWA** and **WebPublish** publishing channels. If you do not see these channels connected to your publication, contact your account administrator.
+</Note>
+
+## Switching Between Languages
+
+Once multiple languages are enabled, you can switch between them in two places: the Article Manager and the Article Builder.
+
+<Accordion title="Switching languages in the Article Manager">
+
+<Steps>
+  <Step title="Open the Article Manager">
+    Navigate to the **Article Manager** for your publication.
+  </Step>
+  <Step title="Open the Language Menu">
+    Click the **Language Menu** button to display the list of enabled languages.
+  </Step>
+  <Step title="Select a language">
+    Choose the language you want to work in. The Article Manager will refresh to show only the selected language versions of your articles.
+  </Step>
+</Steps>
+
+<Note>
+  When working in a translated language, you may see an asterisk (\*) next to some article titles. This indicates the article body has been translated but the **title** has not yet been updated. To translate the title, click **Edit Details** on that article.
+</Note>
+
+</Accordion>
+
+<Accordion title="Switching languages in the Article Builder">
+
+<Steps>
+  <Step title="Open an article">
+    From the **Article Builder**, open the article you want to edit.
+  </Step>
+  <Step title="Select a language from the toolbar">
+    In the navigation toolbar, click the **country flag** icon. This opens a list of all enabled languages.
+  </Step>
+  <Step title="Switch to the target language">
+    Select the language you want to switch to. The article content will update to show the version for that language.
+  </Step>
+</Steps>
+
+</Accordion>
+
+<Note>
+  Regardless of which language you are viewing, all assets (images, videos, and other media) and the article layout remain identical. Only the text content is managed separately per language.
+</Note>
+
+## Manual Multi-Language Workflow
+
+For manual translation, you use the language-switching tools above to move between language versions of an article and type or paste translated content directly into the Article Builder. The typical workflow is:
+
+1. Create and finalise your article content in the primary (source) language.
+2. Enable your target languages in **Publication Settings → Languages**.
+3. Switch to a target language in the Article Builder.
+4. Edit the text components to replace the source-language content with your translated copy.
+5. Translate the article title separately via **Edit Details** in the Article Manager.
+6. Repeat for each additional language.
+
+<Tip>
+  Keep a style guide or glossary for each language to ensure consistency across articles, especially when multiple contributors are providing translations.
+</Tip>
+
+## Automatic Language Translation
+
+Canvasflow offers an AI-driven automatic translation service that can translate article content — including metadata such as titles and descriptions — on demand. You can translate individual articles or an entire issue as a batch.
+
+<Note>
+  Automatic translation is an **on-demand service that must be enabled for your account**. Contact [support@canvasflow.io](mailto:support@canvasflow.io) to learn more or request access.
+</Note>
+
+### Translating a Single Article
+
+<Steps>
+  <Step title="Open the Article Manager">
+    Navigate to the **Article Manager** for your publication.
+  </Step>
+  <Step title="Select the article">
+    Click the **Edit** icon next to the article you want to translate.
+  </Step>
+  <Step title="Start the translation">
+    Click the **Translate** button.
+  </Step>
+  <Step title="Choose source and target languages">
+    In the popup that appears, select the **source language** (the language the article is currently written in) and the **target language** you want to translate into.
+  </Step>
+  <Step title="Confirm">
+    Click **Translate** to begin. The translation typically completes within a few seconds. Once finished, the popup closes automatically.
+  </Step>
+</Steps>
+
+### Translating Multiple Articles (Batch Translation)
+
+<Steps>
+  <Step title="Open the Article Manager">
+    Navigate to the **Article Manager** for your publication.
+  </Step>
+  <Step title="Select the articles">
+    Check the boxes next to each article you want to translate. You can select an entire issue at once if needed.
+  </Step>
+  <Step title="Click Translate">
+    Click the **Translate** button in the toolbar above the article list.
+  </Step>
+  <Step title="Choose source and target languages">
+    In the popup, select the **source language** and the **target language**.
+  </Step>
+  <Step title="Start the batch">
+    Click **Translate** to start the process. Short articles translate in seconds; long or complex articles and large batches may take a few minutes to complete. The popup closes automatically when translation is done.
+  </Step>
+</Steps>
+
+After translation completes, switch to the target language in the Article Manager or Article Builder to review the translated content. You can make further edits to the translated text at any time using the Article Builder.
+
+### Supported Languages for Automatic Translation
+
+<CardGroup cols={3}>
+  <Card title="English" icon="flag" />
+  <Card title="German" icon="flag" />
+  <Card title="Spanish" icon="flag" />
+  <Card title="French" icon="flag" />
+  <Card title="Italian" icon="flag" />
+  <Card title="Japanese" icon="flag" />
+  <Card title="Dutch" icon="flag" />
+  <Card title="Polish" icon="flag" />
+  <Card title="Portuguese (European)" icon="flag" />
+  <Card title="Portuguese (Brazilian)" icon="flag" />
+  <Card title="Russian" icon="flag" />
+  <Card title="Chinese" icon="flag" />
+</CardGroup>
+
+<Tip>
+  Even after automatic translation, you can refine the output in the Article Builder. Automatic translation provides a strong starting point, but a human review is always recommended for publication-ready content.
+</Tip>

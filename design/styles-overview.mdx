@@ -1,0 +1,265 @@
+---
+title: "Canvasflow Styles: Brand Design and Typography Overview"
+sidebarTitle: "Styles Overview"
+description: "Learn how Canvasflow styles define typography, colours, and layout for articles. Understand publication, global, device, and inline style types."
+---
+
+Styles are the foundation of your brand's visual identity in Canvasflow. A style defines everything about how your articles look — from canvas background and padding, to typography, colours, spacing, and borders on individual text components. Because styles are managed independently from article content, you can create a single style once and reuse it across any number of articles or templates, keeping your brand consistent throughout every piece of content you produce.
+
+## What is the Style Manager?
+
+The **Style Manager** is the central hub for creating and managing all styles within a publication. Access it from the secondary toolbar inside any publication, or from the **Style** menu in the **Article Manager**.
+
+From the Style Manager you can:
+
+- Create new styles
+- Customise the canvas and text component appearance in the Style Builder
+- Edit the name, description, and scope of an existing style
+- Duplicate a style to create variations
+- Delete styles that are no longer needed
+
+<Note>
+  Styles are separate from article content and structure. Changing or updating a style affects every article and template that uses it — without you having to touch the content itself.
+</Note>
+
+## Style Types
+
+When you create a new style, you choose one of three types depending on how and where the style will be applied.
+
+<CardGroup cols={3}>
+  <Card title="Article (Standard)" icon="file-lines">
+    The default style type. An Article style controls the full appearance of an article — canvas settings, all text components, layout components, and image credits. Most styles you create will be this type.
+  </Card>
+  <Card title="Inline" icon="layer-group">
+    An Inline style applies different styling to a specific portion of an article — for example, a highlighted profile section with a different background and text colour. It is applied directly to a column component within the Article Builder.
+  </Card>
+  <Card title="Device" icon="mobile-screen">
+    A Device style overrides specific properties of an Article style when the content is viewed on a particular class of device (tablet or desktop). Use it to fine-tune font sizes and spacing without duplicating your core style.
+  </Card>
+</CardGroup>
+
+## Style Scope: Publication vs Global
+
+Every style has a **scope** that controls which publications in your account can access it.
+
+<CardGroup cols={2}>
+  <Card title="Publication Style" icon="building">
+    A Publication (Brand) style is accessible only to articles and templates within the publication it was created in. This is the default scope and the recommended choice for most production workflows.
+  </Card>
+  <Card title="Global Style" icon="globe">
+    A Global style is available to every publication in your account. Use this when several publications share common design language — for example, multiple language editions of the same magazine.
+  </Card>
+</CardGroup>
+
+<Tip>
+  For most teams, Publication scope keeps styles neatly organised per brand. Switch to Global only when you need to share a style across multiple publications.
+</Tip>
+
+## Inherited Styles
+
+Inherited styles let you create subtle variations of an existing style without duplicating and then maintaining multiple independent copies. When you inherit from a parent style, every property starts by reflecting the parent. You then override only the specific properties that need to change — such as canvas padding, headline colour, or subtitle size.
+
+**Why this matters:** If you later need to update the parent style (changing the body font, for example), all inherited child styles automatically reflect that change. This keeps your style library consistent and saves significant maintenance time.
+
+<Accordion title="Example: Section colour variants">
+  Your publication uses a single **Core Style** with a shared font and paragraph size. You have twelve magazine sections, each requiring a different headline colour. Rather than duplicating the Core Style twelve times, create twelve inherited styles (e.g. *Style-Red*, *Style-Blue*) and override only the headline colour in each. Future changes to the core font or paragraph size propagate automatically to all twelve variants.
+</Accordion>
+
+### Creating an Inherited Style
+
+<Steps>
+  <Step title="Open Style Manager">
+    Navigate to the Style Manager from the **Styles** tab in the publication toolbar.
+  </Step>
+  <Step title="Add new style">
+    Click the **+** (Add New) button to open the new style dialogue.
+  </Step>
+  <Step title="Enter a name">
+    Give the inherited style a clear, descriptive name (e.g. *Default – No Top Padding*).
+  </Step>
+  <Step title="Set the source">
+    Under **Source**, select **Inherit From**, then choose the parent style from the **Existing Style** dropdown.
+  </Step>
+  <Step title="Create the style">
+    Click **Create**. The new inherited style appears beneath its parent in the Style Manager, indicated by an arrow icon.
+  </Step>
+</Steps>
+
+### Editing an Inherited Style
+
+When you first open an inherited style in the Style Builder, all properties are greyed out — they are being inherited from the parent. Click any property and change its value to override it. The property turns active, indicating it is no longer inherited.
+
+To revert any overridden property back to the parent value, **double-click the property name**. The value returns to whatever the parent style defines.
+
+## Device Styles
+
+Device styles address the challenge of content looking different across screen sizes. A headline that reads perfectly on mobile may feel too small on a large desktop browser. Device styles let you override specific properties of an Article style for **tablet** and **desktop** viewports, without affecting the mobile presentation.
+
+### Creating a Device Style
+
+<Steps>
+  <Step title="Create a new style">
+    Open Style Manager and click **+** to create a new style. Choose a name that references the target device, such as *Modern-Desktop*.
+  </Step>
+  <Step title="Set the type to Device">
+    In the **Type** dropdown, select **Device**.
+  </Step>
+  <Step title="Create and customise">
+    Click **Create**, then open the new Device style in the Style Builder and adjust the properties you want to override (for example, increase headline size for desktop).
+  </Step>
+</Steps>
+
+### Associating a Device Style with an Article Style
+
+<Steps>
+  <Step title="Open the Article style settings">
+    In Style Manager, click the **Settings** icon next to the Article style you want to enhance.
+  </Step>
+  <Step title="Assign the Device style">
+    In the **Edit style** window, locate the **Tablet** and/or **Desktop** fields and select the Device style you created.
+  </Step>
+  <Step title="Save and republish">
+    Click **Update**, then republish any affected articles for the Device style to take effect.
+  </Step>
+</Steps>
+
+To disconnect a Device style, repeat the steps above and set the relevant field back to **None**.
+
+## Inline Styles
+
+Inline styles let you apply an alternative look to a specific section of an article without changing the overall article style. For instance, a profile or call-out box might need a coloured background, a border, and slightly larger text — all within an otherwise standard article.
+
+### Creating and Applying an Inline Style
+
+<Steps>
+  <Step title="Create the Inline style">
+    In Style Manager, click **Add New** and select **Inline** from the **Type** dropdown. Build the style in the Style Builder — properties inherit from the parent article style until you explicitly override them.
+  </Step>
+  <Step title="Add a column component to your article">
+    Open the article in Article Builder and drag a **Column** component onto the canvas. Place the content that needs special styling inside the column.
+  </Step>
+  <Step title="Apply the Inline style">
+    Hover over the column, click the **Edit** icon to reveal its properties, then navigate to the **Inline Style** section and select your style from the dropdown.
+  </Step>
+</Steps>
+
+## Creating, Editing, Duplicating, and Deleting Styles
+
+### Creating a New Style
+
+<Steps>
+  <Step title="Navigate to Style Manager">
+    From the publication toolbar, open the Style Manager.
+  </Step>
+  <Step title="Click Create Style">
+    Click the **Create style** button at the top right of the Style Manager.
+  </Step>
+  <Step title="Fill in the details">
+    Enter a **Name** and **Description** for the style. Select the **Scope** (Publication or Global) and the **Type** (Article, Inline, or Device).
+  </Step>
+  <Step title="Choose a source">
+    Select **New** to start from scratch, **Copy From** to duplicate an existing style, or **Inherit From** to create an inherited style.
+  </Step>
+  <Step title="Click Create">
+    Click **Create**. The style appears in the Style Manager list and is ready to customise in the Style Builder.
+  </Step>
+</Steps>
+
+### Editing a Style
+
+<Steps>
+  <Step title="Locate the style">
+    In Style Manager, find the style you want to update.
+  </Step>
+  <Step title="Open Edit style">
+    Click the **Settings** icon in the Options column to open the **Edit style** window.
+  </Step>
+  <Step title="Update the fields">
+    Edit the **Title**, **Description**, **Scope**, and optionally assign **Tablet** or **Desktop** Device styles.
+  </Step>
+  <Step title="Save">
+    Click **Update** to apply your changes.
+  </Step>
+</Steps>
+
+You can also edit a style from within the Article Builder: open the **Styles** dropdown in the article toolbar and click **Edit** next to the style you want to change. This opens the style in **Article View** mode, so you can see style changes in the context of your live article content.
+
+### Duplicating a Style
+
+To create a variation of an existing style:
+
+<Steps>
+  <Step title="Create a new style">
+    In Style Manager, click **Create style**.
+  </Step>
+  <Step title="Select Copy From">
+    Under **Source**, choose **Copy From**, then select the style you want to duplicate from the **Existing Style** dropdown.
+  </Step>
+  <Step title="Create">
+    Click **Create**. A new independent copy of the style is created and available to customise.
+  </Step>
+</Steps>
+
+<Tip>
+  To duplicate a style into a different publication, temporarily set the original style's scope to **Global**, create a copy in the target publication using **Copy From**, then change the original back to Publication scope.
+</Tip>
+
+### Deleting a Style
+
+<Steps>
+  <Step title="Open Style Manager">
+    Navigate to Style Manager and locate the style you want to delete.
+  </Step>
+  <Step title="Open the options">
+    Click the **Settings** (cog) icon next to the style.
+  </Step>
+  <Step title="Confirm deletion">
+    Select **Delete** and confirm in the popup that appears.
+  </Step>
+</Steps>
+
+<Warning>
+  Deleting a style is **permanent and cannot be reversed**. You cannot delete a style that is currently in use by an article or template — you must first reassign those articles and templates to a different style. Deleting a style does not affect content that has already been published.
+</Warning>
+
+## Changing the Active Style of an Article
+
+Because styles are managed independently, you can swap the style applied to an article at any time.
+
+### From Article Manager
+
+Use this method to update multiple articles quickly when you are confident the style change will not adversely affect the layout.
+
+<Steps>
+  <Step title="Enter Article Manager">
+    Open the Article Manager for your publication.
+  </Step>
+  <Step title="Open article properties">
+    Click the **Settings** icon next to the article, then choose **Edit item**.
+  </Step>
+  <Step title="Change the style">
+    Open the **Style** menu in the Article Properties panel and select the new style.
+  </Step>
+  <Step title="Save">
+    Click **OK** to save the change.
+  </Step>
+</Steps>
+
+### From Article Builder
+
+Use this method when you want to preview exactly how the new style looks against your current article content before committing.
+
+<Steps>
+  <Step title="Open the article">
+    Open the article in Article Builder.
+  </Step>
+  <Step title="Open the Style menu">
+    Click the **Style menu** at the top right of the Article Toolbar.
+  </Step>
+  <Step title="Select a style">
+    Click the style you want to apply. It is applied to the canvas immediately.
+  </Step>
+  <Step title="Save">
+    Click outside the style menu to close it, then click **Save** to commit the change.
+  </Step>
+</Steps>
